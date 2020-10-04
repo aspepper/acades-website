@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home_top {
+  z-index: 11;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  margin-top: 100px;
+  left: 50%;
+  height: 543px;
+  align-content: center;
+}
+
+.image-logo {
+  background-image: url("../../assets/images/logo-header.png");
+}
+
+.text_color_lead {
+  color: #3f78ba;
+}
+
+.top30 {
+  margin-top: 30px;
+}
+
+.top100 {
+  margin-top: 100px;
+}
+
+.home_top_background {
+  background-image: url("../../assets/images/home_top.jpg");
+  max-width: 1200px;
+  max-height: 543px;
+  display: flex;
+  align-items: center
+}
+
+.background_color_prata {
+  background-color: #e6e6e6;
+}
+
+.background_color_black {
+  background-color: #ced2da;
+}
