@@ -6,15 +6,18 @@
 
 .seccion_fullwidth {
   z-index: 11;
-  width: 100vw;
+  width: 102%;
+  margin-left: -1vw;
   position: relative;
-  margin-left: -50vw;
-  left: 50%;
   align-content: center;
 }
 
+.home_top_background img {
+  width: 100%;
+}
+
 .home_top {
-  height: 553px;
+  height: 38vw;
 }
 
 .image-logo {
@@ -25,26 +28,10 @@
   color: #3f78ba;
 }
 
-.top30 {
-  margin-top: 30px;
-}
-
-.top100 {
-  margin-top: 100px;
-}
-
-.home_top_background {
-  background-image: url("../../assets/images/home_top.jpg");
-  max-width: 1200px;
-  max-height: 543px;
-  display: flex;
-  align-items: center
-}
-
 .background_color_prata {
   background-color: #e6e6e6;
 }
 
-.background_color_black {
+.background_color_cinza_faixa {
   background-color: #ced2da;
 }
