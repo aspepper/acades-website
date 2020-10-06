@@ -43,6 +43,14 @@
     <None Remove="ClientApp\dist\polyfills-es2015.ffa9bb4e015925544f91.js.LICENSE.txt" />
     <None Remove="ClientApp\dist\polyfills-es5-es2015.026233df937cbf728097.js.LICENSE.txt" />
     <None Remove="ClientApp\dist\assets\images\logo-header.png" />
+    <None Remove="ClientApp\dist\logo-header.d4c5e285dfee9ee62f51.png" />
+    <None Remove="ClientApp\dist\styles.64bbbcd11a8c2a310529.css" />
+    <None Remove="ClientApp\dist\assets\images\analytics_dashboard.png" />
+    <None Remove="ClientApp\dist\assets\images\icon_azure_service.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top.jpg" />
+    <None Remove="ClientApp\dist\assets\images\icon_aws_service.png" />
+    <None Remove="ClientApp\dist\assets\images\icon_etl_service.png" />
+    <None Remove="ClientApp\dist\assets\images\icon_agile_service.png" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

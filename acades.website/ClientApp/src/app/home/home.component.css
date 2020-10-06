@@ -35,3 +35,12 @@
 .background_color_cinza_faixa {
   background-color: #ced2da;
 }
+
+.content_icons {
+    height: 3vw;
+    align-content: center;
+}
+
+.content_icons img {
+  height: 3vw;
+}
