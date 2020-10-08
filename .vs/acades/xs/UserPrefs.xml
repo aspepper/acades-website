@@ -1,18 +1,18 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|Default">
-  <MonoDevelop.Ide.ItemProperties.Services.acades.api FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="acades.website/ClientApp/src/app/home/home.component.ts">
     <Files>
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.html" Line="45" Column="30" />
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.ts" Line="18" Column="31" />
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.css" Line="53" Column="16" />
-      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" Line="30" Column="115" />
-      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" Line="3" Column="15" />
-      <File FileName="acades.website/ClientApp/src/app/career/career.component.html" Line="1" Column="1" />
-      <File FileName="acades.website/ClientApp/src/app/contact-us/contact-us.component.html" Line="1" Column="1" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.html" Line="39" Column="7" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.ts" Line="1" Column="21" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.css" />
+      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" />
+      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" />
+      <File FileName="acades.website/ClientApp/src/app/career/career.component.html" />
+      <File FileName="acades.website/ClientApp/src/app/contact-us/contact-us.component.html" />
       <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" />
       <File FileName="acades.website/ClientApp/angular.json" Line="25" Column="48" />
+      <File FileName="acades.website/ClientApp/package.json" Line="36" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,9 @@
                   <Node name="app" expanded="True">
                     <Node name="about-us" expanded="True" />
                     <Node name="career" expanded="True" />
-                    <Node name="contact-us" expanded="True" />
+                    <Node name="contact-us" expanded="True">
+                      <Node name="contact-us.component.ts" selected="True" />
+                    </Node>
                     <Node name="footer" expanded="True" />
                     <Node name="home" expanded="True" />
                     <Node name="nav-menu" expanded="True" />
@@ -37,7 +39,6 @@
                     <Node name="images" expanded="True" />
                   </Node>
                 </Node>
-                <Node name="angular.json" selected="True" />
               </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Pages" expanded="True" />
@@ -53,7 +54,6 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Models.acades.entities FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

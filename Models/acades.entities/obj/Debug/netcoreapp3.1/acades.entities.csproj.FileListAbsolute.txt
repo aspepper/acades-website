@@ -1,0 +1,9 @@
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/bin/Debug/netcoreapp3.1/acades.entities.deps.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/bin/Debug/netcoreapp3.1/acades.entities.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/bin/Debug/netcoreapp3.1/acades.entities.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.AssemblyInfoInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.AssemblyInfo.cs
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.csproj.CoreCompileInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.pdb
