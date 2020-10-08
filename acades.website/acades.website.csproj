@@ -51,6 +51,9 @@
     <None Remove="ClientApp\dist\assets\images\icon_aws_service.png" />
     <None Remove="ClientApp\dist\assets\images\icon_etl_service.png" />
     <None Remove="ClientApp\dist\assets\images\icon_agile_service.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_old.jpg" />
+    <None Remove="ClientApp\dist\assets\images\home_top.png" />
+    <None Remove="ClientApp\dist\assets\images\about_us_top.jpg" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

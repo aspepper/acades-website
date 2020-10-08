@@ -3,20 +3,23 @@
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.css" Line="41" Column="27" />
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/career/career.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/contact-us/contact-us.component.html" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.html" Line="45" Column="30" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.ts" Line="18" Column="31" />
+      <File FileName="acades.website/ClientApp/src/app/home/home.component.css" Line="53" Column="16" />
+      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" Line="30" Column="115" />
+      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" Line="3" Column="15" />
+      <File FileName="acades.website/ClientApp/src/app/career/career.component.html" Line="1" Column="1" />
+      <File FileName="acades.website/ClientApp/src/app/contact-us/contact-us.component.html" Line="1" Column="1" />
       <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" Line="29" Column="1" />
+      <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" />
+      <File FileName="acades.website/ClientApp/angular.json" Line="25" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="acades" expanded="True">
             <Node name="Models" expanded="True" />
-            <Node name="acades.website" expanded="True" selected="True">
+            <Node name="acades.website" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
@@ -34,6 +37,7 @@
                     <Node name="images" expanded="True" />
                   </Node>
                 </Node>
+                <Node name="angular.json" selected="True" />
               </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Pages" expanded="True" />
@@ -41,6 +45,9 @@
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

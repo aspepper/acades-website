@@ -44,3 +44,21 @@
 .content_icons img {
   height: 3vw;
 }
+
+@media screen and (max-width: 960px) {
+  .target_div_subject {
+    margin-right: 1vw;
+  }
+  .values_div_subject {
+    margin-left: 1vw;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .target_div_subject {
+    margin-right: 2vw;
+  }
+  .values_div_subject {
+    margin-left: 1vw;
+  }
+}
