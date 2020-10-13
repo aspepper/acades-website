@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{90F452
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.entities", "Models\acades.entities\acades.entities.csproj", "{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3DDBC3F7-45EF-45B5-9C8F-5578053209B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.data", "Data\acades.data\acades.data.csproj", "{D588E64A-73D9-444B-89EF-995F0A456C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D588E64A-73D9-444B-89EF-995F0A456C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D588E64A-73D9-444B-89EF-995F0A456C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D588E64A-73D9-444B-89EF-995F0A456C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D588E64A-73D9-444B-89EF-995F0A456C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +49,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1CDCC566-39F8-454A-B11F-8F360EA094B6} = {D2CBE997-9613-4FA4-B1F6-AA536BE12CA4}
 		{00C73C15-F3AB-43EF-9B1C-236D30ECF26A} = {90F452BD-1CE2-44FF-A5F7-1E58516EF1C7}
+		{D588E64A-73D9-444B-89EF-995F0A456C86} = {3DDBC3F7-45EF-45B5-9C8F-5578053209B8}
 	EndGlobalSection
 EndGlobal

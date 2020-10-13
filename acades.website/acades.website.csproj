@@ -54,6 +54,18 @@
     <None Remove="ClientApp\dist\assets\images\home_top_old.jpg" />
     <None Remove="ClientApp\dist\assets\images\home_top.png" />
     <None Remove="ClientApp\dist\assets\images\about_us_top.jpg" />
+    <None Remove="ClientApp\dist\scripts.fc065b8f86ba80c666e4.js.LICENSE.txt" />
+    <None Remove="ClientApp\dist\scripts.fc065b8f86ba80c666e4.js" />
+    <None Remove="ClientApp\dist\assets\images\home_top_004.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_003.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_002.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_001.png" />
+    <None Remove="ClientApp\dist\assets\images\values_busines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\acades.data\acades.data.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

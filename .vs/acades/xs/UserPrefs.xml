@@ -1,34 +1,38 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|Default">
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="acades.website/ClientApp/src/app/home/home.component.ts">
+  <MonoDevelop.Ide.Workbench ActiveDocument="acades.website/Startup.cs">
     <Files>
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.html" Line="39" Column="7" />
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.ts" Line="1" Column="21" />
-      <File FileName="acades.website/ClientApp/src/app/home/home.component.css" />
-      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" />
+      <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" Line="51" Column="15" />
       <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" />
-      <File FileName="acades.website/ClientApp/src/app/career/career.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/contact-us/contact-us.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" />
-      <File FileName="acades.website/ClientApp/angular.json" Line="25" Column="48" />
-      <File FileName="acades.website/ClientApp/package.json" Line="36" Column="30" />
+      <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.css" />
+      <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
+      <File FileName="Data/acades.data/DataBaseContext.cs" Line="18" Column="12" />
+      <File FileName="Models/acades.entities/Person.cs" Line="23" Column="44" />
+      <File FileName="Data/acades.data/BaseDbInitializer.cs" Line="45" Column="6" />
+      <File FileName="acades.website/Startup.cs" Line="27" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="acades" expanded="True">
-            <Node name="Models" expanded="True" />
-            <Node name="acades.website" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="acades.data" expanded="True" />
+            </Node>
+            <Node name="Models" expanded="True">
+              <Node name="acades.entities" expanded="True" />
+            </Node>
+            <Node name="Services" expanded="True">
+              <Node name="acades.api" expanded="True" />
+            </Node>
+            <Node name="acades.website" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
                   <Node name="app" expanded="True">
                     <Node name="about-us" expanded="True" />
                     <Node name="career" expanded="True" />
-                    <Node name="contact-us" expanded="True">
-                      <Node name="contact-us.component.ts" selected="True" />
-                    </Node>
+                    <Node name="contact-us" expanded="True" />
                     <Node name="footer" expanded="True" />
                     <Node name="home" expanded="True" />
                     <Node name="nav-menu" expanded="True" />
@@ -43,12 +47,10 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Pages" expanded="True" />
               <Node name="wwwroot" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
