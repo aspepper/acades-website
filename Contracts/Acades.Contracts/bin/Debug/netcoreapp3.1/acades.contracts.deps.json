@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "acades.contracts/1.0.0": {
+        "dependencies": {
+          "acades.entities": "1.0.0"
+        },
+        "runtime": {
+          "acades.contracts.dll": {}
+        }
+      },
+      "acades.entities/1.0.0": {
+        "runtime": {
+          "acades.entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "acades.contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "acades.entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

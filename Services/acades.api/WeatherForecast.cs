@@ -1,6 +1,6 @@
 using System;
 
-namespace acades.api
+namespace Acades.API
 {
     public class WeatherForecast
     {

@@ -1,0 +1,12 @@
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.csprojAssemblyReference.cache
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.AssemblyInfoInputs.cache
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.AssemblyInfo.cs
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.csproj.CoreCompileInputs.cache
+D:\Projetos\acades-website\Contracts\acades.contracts\bin\Debug\netcoreapp3.1\acades.contracts.deps.json
+D:\Projetos\acades-website\Contracts\acades.contracts\bin\Debug\netcoreapp3.1\acades.contracts.dll
+D:\Projetos\acades-website\Contracts\acades.contracts\bin\Debug\netcoreapp3.1\acades.contracts.pdb
+D:\Projetos\acades-website\Contracts\acades.contracts\bin\Debug\netcoreapp3.1\acades.entities.dll
+D:\Projetos\acades-website\Contracts\acades.contracts\bin\Debug\netcoreapp3.1\acades.entities.pdb
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.csproj.CopyComplete
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.dll
+D:\Projetos\acades-website\Contracts\acades.contracts\obj\Debug\netcoreapp3.1\acades.contracts.pdb

@@ -1,6 +1,6 @@
 using System;
 
-namespace acades.website
+namespace Acades.Website
 {
     public class WeatherForecast
     {

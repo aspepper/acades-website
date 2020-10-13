@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.website", "acades.website\acades.website.csproj", "{40B2D5B3-10CF-4E25-A51A-8F24785005BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acades.Website", "Acades.Website\Acades.Website.csproj", "{40B2D5B3-10CF-4E25-A51A-8F24785005BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D2CBE997-9613-4FA4-B1F6-AA536BE12CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.api", "Services\acades.api\acades.api.csproj", "{1CDCC566-39F8-454A-B11F-8F360EA094B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acades.API", "Services\Acades.API\Acades.API.csproj", "{1CDCC566-39F8-454A-B11F-8F360EA094B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{90F452BD-1CE2-44FF-A5F7-1E58516EF1C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.entities", "Models\acades.entities\acades.entities.csproj", "{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acades.Entities", "Models\Acades.Entities\Acades.Entities.csproj", "{00C73C15-F3AB-43EF-9B1C-236D30ECF26A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3DDBC3F7-45EF-45B5-9C8F-5578053209B8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{3DDBC3F7-45EF-45B5-9C8F-5578053209B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acades.data", "Data\acades.data\acades.data.csproj", "{D588E64A-73D9-444B-89EF-995F0A456C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acades.Repository", "Repository\Acades.Repository\Acades.Repository.csproj", "{D588E64A-73D9-444B-89EF-995F0A456C86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{D9FFA300-7F41-4684-8A1B-2A993301DE6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acades.Contracts", "Contracts\Acades.Contracts\Acades.Contracts.csproj", "{15E5AB40-BD65-4059-81CD-2EBF2A817436}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "Services\LoggerService\LoggerService.csproj", "{B838EB2A-5490-4572-8A35-E3CE3270C838}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,16 +45,26 @@ Global
 		{D588E64A-73D9-444B-89EF-995F0A456C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D588E64A-73D9-444B-89EF-995F0A456C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D588E64A-73D9-444B-89EF-995F0A456C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E5AB40-BD65-4059-81CD-2EBF2A817436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E5AB40-BD65-4059-81CD-2EBF2A817436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E5AB40-BD65-4059-81CD-2EBF2A817436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E5AB40-BD65-4059-81CD-2EBF2A817436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B838EB2A-5490-4572-8A35-E3CE3270C838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B838EB2A-5490-4572-8A35-E3CE3270C838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B838EB2A-5490-4572-8A35-E3CE3270C838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B838EB2A-5490-4572-8A35-E3CE3270C838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8E6FBFBA-262F-4190-92E8-669366AC485B}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1CDCC566-39F8-454A-B11F-8F360EA094B6} = {D2CBE997-9613-4FA4-B1F6-AA536BE12CA4}
 		{00C73C15-F3AB-43EF-9B1C-236D30ECF26A} = {90F452BD-1CE2-44FF-A5F7-1E58516EF1C7}
 		{D588E64A-73D9-444B-89EF-995F0A456C86} = {3DDBC3F7-45EF-45B5-9C8F-5578053209B8}
+		{15E5AB40-BD65-4059-81CD-2EBF2A817436} = {D9FFA300-7F41-4684-8A1B-2A993301DE6B}
+		{B838EB2A-5490-4572-8A35-E3CE3270C838} = {D2CBE997-9613-4FA4-B1F6-AA536BE12CA4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E6FBFBA-262F-4190-92E8-669366AC485B}
 	EndGlobalSection
 EndGlobal

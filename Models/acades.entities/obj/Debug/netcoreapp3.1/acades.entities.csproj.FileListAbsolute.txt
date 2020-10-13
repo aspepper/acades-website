@@ -7,3 +7,15 @@
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.csproj.CoreCompileInputs.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/Debug/netcoreapp3.1/acades.entities.pdb
+D:\Projetos\acades-website\Models\acades.entities\bin\Debug\netcoreapp3.1\acades.entities.deps.json
+D:\Projetos\acades-website\Models\acades.entities\bin\Debug\netcoreapp3.1\acades.entities.dll
+D:\Projetos\acades-website\Models\acades.entities\bin\Debug\netcoreapp3.1\acades.entities.pdb
+D:\Projetos\acades-website\Models\acades.entities\obj\Debug\netcoreapp3.1\acades.entities.csprojAssemblyReference.cache
+D:\Projetos\acades-website\Models\acades.entities\obj\Debug\netcoreapp3.1\acades.entities.AssemblyInfoInputs.cache
+D:\Projetos\acades-website\Models\acades.entities\obj\Debug\netcoreapp3.1\acades.entities.AssemblyInfo.cs
+D:\Projetos\acades-website\Models\acades.entities\obj\Debug\netcoreapp3.1\acades.entities.dll
+D:\Projetos\acades-website\Models\acades.entities\obj\Debug\netcoreapp3.1\acades.entities.pdb
+D:\Projetos\acades-website\Models\Acades.Entities\bin\Debug\netcoreapp3.1\Acades.Entities.runtimeconfig.json
+D:\Projetos\acades-website\Models\Acades.Entities\bin\Debug\netcoreapp3.1\Acades.Entities.runtimeconfig.dev.json
+D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.genruntimeconfig.cache
+D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.csproj.CoreCompileInputs.cache

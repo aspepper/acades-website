@@ -1,0 +1,10 @@
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\LoggerService.deps.json
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\LoggerService.dll
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\Acades.Contracts.dll
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\Acades.Entities.dll
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\Acades.Contracts.pdb
+D:\Projetos\acades-website\Services\LoggerService\bin\Debug\netcoreapp3.1\Acades.Entities.pdb
+D:\Projetos\acades-website\Services\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.csprojAssemblyReference.cache
+D:\Projetos\acades-website\Services\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.AssemblyInfoInputs.cache
+D:\Projetos\acades-website\Services\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.AssemblyInfo.cs
+D:\Projetos\acades-website\Services\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.csproj.CopyComplete

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace acades.website.Controllers
+namespace Acades.Website.Controllers
 {
     [ApiController]
     [Route("[controller]")]
