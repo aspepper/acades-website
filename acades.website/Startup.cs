@@ -21,8 +21,8 @@ namespace acades.website
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddPlatformIdentity<DataBaseContext>(this.Configuration, "AcadesDatabase");
-            services.AddPlatformServices(this.Configuration);
+            //services.AddPlatformIdentity<DataBaseContext>(this.Configuration, "AcadesDatabase");
+            //services.AddPlatformServices(this.Configuration);
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

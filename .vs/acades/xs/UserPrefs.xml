@@ -1,16 +1,16 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|Default">
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="acades.website/Startup.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" Line="51" Column="15" />
       <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" />
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" />
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.css" />
       <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
-      <File FileName="Data/acades.data/DataBaseContext.cs" Line="18" Column="12" />
-      <File FileName="Models/acades.entities/Person.cs" Line="23" Column="44" />
-      <File FileName="Data/acades.data/BaseDbInitializer.cs" Line="45" Column="6" />
-      <File FileName="acades.website/Startup.cs" Line="27" Column="44" />
+      <File FileName="Data/acades.data/DataBaseContext.cs" />
+      <File FileName="Models/acades.entities/Person.cs" />
+      <File FileName="Data/acades.data/BaseDbInitializer.cs" />
+      <File FileName="acades.website/Startup.cs" Line="25" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
