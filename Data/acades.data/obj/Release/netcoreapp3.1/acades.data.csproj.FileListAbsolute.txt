@@ -1,0 +1,15 @@
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.data.deps.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.data.runtimeconfig.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.data.runtimeconfig.dev.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.data.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.data.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.entities.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/bin/Release/netcoreapp3.1/acades.entities.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.AssemblyInfoInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.AssemblyInfo.cs
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.csproj.CoreCompileInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.csproj.CopyComplete
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Data/acades.data/obj/Release/netcoreapp3.1/acades.data.genruntimeconfig.cache
