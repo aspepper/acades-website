@@ -1,13 +1,17 @@
+using Acades.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Acades.API
 {
+
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -18,9 +22,11 @@ namespace Acades.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.ConfigureLoggerService();
-            services.ConfigureMySqlContext(Configuration);
-            services.ConfigureRepositoryWrapper();
+            services.AddDbContext<RepositoryContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("AcadesDatabase"),
+                    b => b.MigrationsAssembly(typeof(RepositoryContext).Assembly.FullName)));
+
             services.AddControllers();
         }
 
@@ -42,6 +48,9 @@ namespace Acades.API
             {
                 endpoints.MapControllers();
             });
+
         }
+
     }
+
 }
