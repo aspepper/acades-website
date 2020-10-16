@@ -1,19 +1,19 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1CDCC566-39F8-454A-B11F-8F360EA094B6}|Default">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|acades.website">
   <MonoDevelop.Ide.ItemProperties.Acades.Website PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Repository/Acades.Repository/RepositoryBase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Acades.API/Startup.cs">
     <Files>
       <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.html" Line="51" Column="15" />
       <File FileName="acades.website/ClientApp/src/app/about-us/about-us.component.css" />
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.html" />
-      <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.css" Line="1" Column="1" />
-      <File FileName="acades.website/ClientApp/src/app/services/services.component.html" Line="1" Column="1" />
-      <File FileName="acades.website/Startup.cs" Line="8" Column="1" />
-      <File FileName="Services/Acades.API/Startup.cs" Line="55" Column="1" />
-      <File FileName="Models/Acades.Entities/RepositoryContext.cs" Line="23" Column="1" />
-      <File FileName="Models/Acades.Entities/Models/Person.cs" Line="15" Column="44" />
-      <File FileName="Repository/Acades.Repository/RepositoryBase.cs" Line="4" Column="37" />
-      <File FileName="Repository/Acades.Repository/RepositoryWrapper.cs" Line="23" Column="1" />
+      <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.css" />
+      <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
+      <File FileName="acades.website/Startup.cs" />
+      <File FileName="Services/Acades.API/Startup.cs" Line="34" Column="69" />
+      <File FileName="Models/Acades.Entities/RepositoryContext.cs" />
+      <File FileName="Models/Acades.Entities/Models/Person.cs" />
+      <File FileName="Repository/Acades.Repository/RepositoryBase.cs" />
+      <File FileName="Repository/Acades.Repository/RepositoryWrapper.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,12 +28,12 @@
               </Node>
             </Node>
             <Node name="Repository" expanded="True">
-              <Node name="Acades.Repository" expanded="True">
-                <Node name="RepositoryBase.cs" selected="True" />
-              </Node>
+              <Node name="Acades.Repository" expanded="True" />
             </Node>
             <Node name="Services" expanded="True">
-              <Node name="Acades.API" expanded="True" />
+              <Node name="Acades.API" expanded="True">
+                <Node name="Startup.cs" selected="True" />
+              </Node>
               <Node name="LoggerService" expanded="True" />
             </Node>
             <Node name="Acades.Website" expanded="True" />
