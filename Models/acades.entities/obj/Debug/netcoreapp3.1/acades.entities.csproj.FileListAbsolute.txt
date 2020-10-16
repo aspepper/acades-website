@@ -20,3 +20,4 @@ D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades
 D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.dll
 D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.pdb
 D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.genruntimeconfig.cache
+D:\Projetos\acades-website\Models\Acades.Entities\obj\Debug\netcoreapp3.1\Acades.Entities.csprojAssemblyReference.cache
