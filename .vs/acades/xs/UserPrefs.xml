@@ -9,7 +9,7 @@
       <File FileName="acades.website/ClientApp/src/app/user-cases/user-cases.component.css" />
       <File FileName="acades.website/ClientApp/src/app/services/services.component.html" />
       <File FileName="acades.website/Startup.cs" />
-      <File FileName="Services/Acades.API/Startup.cs" Line="34" Column="69" />
+      <File FileName="Services/Acades.API/Startup.cs" Line="25" Column="43" />
       <File FileName="Models/Acades.Entities/RepositoryContext.cs" />
       <File FileName="Models/Acades.Entities/Models/Person.cs" />
       <File FileName="Repository/Acades.Repository/RepositoryBase.cs" />
