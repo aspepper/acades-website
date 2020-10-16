@@ -9,6 +9,7 @@
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.genruntimeconfig.cache
+<<<<<<< HEAD
 D:/Projetos/acades-website/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Entities.deps.json
 D:/Projetos/acades-website/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Entities.runtimeconfig.json
 D:/Projetos/acades-website/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Entities.runtimeconfig.dev.json
@@ -20,3 +21,7 @@ D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades
 D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.dll
 D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.pdb
 D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.genruntimeconfig.cache
+=======
+D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.csprojAssemblyReference.cache
+>>>>>>> 69f9136a113fb5a22e3dacb3bd366f4c1d715453
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.csprojAssemblyReference.cache
