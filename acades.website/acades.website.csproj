@@ -13,8 +13,10 @@
     <RootNamespace>Acades.Website</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'acades.website' " />
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,10 @@
     <Folder Include="ClientApp\src\app\contact-us\" />
     <Folder Include="ClientApp\src\assets\images\" />
     <Folder Include="ClientApp\src\app\footer\" />
+    <Folder Include="ClientApp\src\app\shared\" />
+    <Folder Include="ClientApp\src\app\shared\models\" />
+    <Folder Include="ClientApp\src\assets\scripts\" />
+    <Folder Include="ClientApp\src\app\shared\services\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ClientApp\dist\styles.21740b8d4fc1f43f5604.css" />
@@ -62,6 +68,24 @@
     <None Remove="ClientApp\dist\assets\images\home_top_002.png" />
     <None Remove="ClientApp\dist\assets\images\home_top_001.png" />
     <None Remove="ClientApp\dist\assets\images\values_busines.png" />
+    <None Remove="ClientApp\dist\assets\images\carrer_banner.jpg" />
+    <None Remove="ClientApp\dist\assets\images\alex_profile_prof.png" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_movida.jpg" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_ltm.jpg" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_ybymartech.gif" />
+    <None Remove="ClientApp\dist\assets\images\logo_marca_vertical.jpg" />
+    <None Remove="ClientApp\dist\assets\images\logo_marca_vertical.png" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_duratex.jpg" />
+    <None Remove="ClientApp\dist\styles.27945d942ea95ca3397d.css" />
+    <None Remove="ClientApp\dist\assets\images\services_data_analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Acades.Entities\Acades.Entities.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Acades.Business\Acades.Business.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
@@ -83,7 +107,7 @@
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
       <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>

@@ -1,3 +1,4 @@
+using Acades.Business;
 using Acades.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +28,21 @@ namespace Acades.API
                     Configuration.GetConnectionString("AcadesDatabase"),
                     b => b.MigrationsAssembly(typeof(RepositoryContext).Assembly.FullName)));
 
+            //services.AddScoped<BaseBusiness>();
+            //services.AddScoped<CarrerBusiness>();
+
             services.AddControllers();
+            //services.AddSingleton<IPlaceInfoService, PlaceInfoService>();
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Acades Site Web API",
+                    Version = "v2",
+                    Description = "Serviço Diversos",
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +63,9 @@ namespace Acades.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "Acades Services"));
 
         }
 

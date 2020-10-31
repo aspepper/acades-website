@@ -37,7 +37,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 14, 7, 45, 14, 393, DateTimeKind.Local).AddTicks(8060));
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 181, DateTimeKind.Local).AddTicks(1170));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -57,7 +57,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 14, 7, 45, 14, 428, DateTimeKind.Local).AddTicks(6290));
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 216, DateTimeKind.Local).AddTicks(2520));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -67,6 +67,165 @@ namespace Acades.Entities.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Person");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.PersonRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 234, DateTimeKind.Local).AddTicks(7210));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 235, DateTimeKind.Local).AddTicks(5760));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("PersonRole");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 228, DateTimeKind.Local).AddTicks(6430));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 229, DateTimeKind.Local).AddTicks(2070));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 223, DateTimeKind.Local).AddTicks(7130));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 224, DateTimeKind.Local).AddTicks(2560));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("User");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.PersonRole", b =>
+                {
+                    b.HasOne("Acades.Entities.Models.Person", "Person")
+                        .WithMany("Roles")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Acades.Entities.Models.Role", "Role")
+                        .WithMany("Persons")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.User", b =>
+                {
+                    b.HasOne("Acades.Entities.Models.Person", "Person")
+                        .WithMany("Users")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

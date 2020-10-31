@@ -18,3 +18,103 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.seccion_fullwidth {
+  z-index: 11;
+  width: 102%;
+  margin-left: -1vw;
+  position: relative;
+  align-content: center;
+}
+
+.image-logo {
+  background-image: url("assets/images/logo-header.png");
+}
+
+.text_color_lead {
+  color: #3f78ba;
+}
+
+.background_color_prata {
+  background-color: #e6e6e6;
+}
+
+.background_color_cinza_faixa {
+  background-color: #ced2da;
+}
+
+.bg-color-tm-yellow {
+  background-color: #f3ba31;
+}
+
+.bg-color-tm-bluelight {
+  background-color: #47a8de;
+}
+
+.bg-color-tm-blue {
+  background-color: #3f78ba;
+}
+
+.bg-color-tm-bluedark {
+  background-color: #2b3d4f;
+}
+
+.txt-color-tm-yellow {
+  color: #f3ba31;
+}
+
+.txt-color-tm-bluelight {
+  color: #47a8de;
+}
+
+.txt-color-tm-blue {
+  color: #3f78ba;
+}
+
+.txt-color-tm-bluedark {
+  color: #2b3d4f;
+}
+
+.txt-color-tm-white {
+  color: #ffffff;
+}
+
+.txt-shadow {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.txt-color-tm-white {
+  color: #ffffff;
+}
+
+p.introduction:first-letter {
+  font-family: 'Trebuchet MS', Times, Sans-Serif;
+  font-size: 110%;
+  font-weight: bold;
+  width: 2em;
+}
+
+@media screen and (max-width: 960px) {
+  p.introduction {
+    font-size: 4vw;
+    text-align: justify;
+  }
+
+  .title_divs {
+    font-size: 1vw;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  p.introduction {
+    font-size: 1.5vw;
+    text-align: justify;
+  }
+
+  .title_divs {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+}
+

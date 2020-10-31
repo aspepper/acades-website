@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l5yGnrspfITjlPnyWzwzyI46mnjjd1iGT3bVwnUFxYMnQ7R/O4RmMFKLP4BR/TUR0KLMRCe0MLuYjdMv20V1Gw==",
+  "dgSpecHash": "6avdRrq+UrO7mEY5ps7HBdEScvKCBB50xr9QybvAz4M2zEdjKvK0q3qyKfE0K6G66T/QQ+cxiztB8Sihmz8iaw==",
   "success": true,
-  "projectFilePath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
+  "projectFilePath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
   "expectedPackageFiles": [
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -105,12 +105,5 @@
     "/Users/alexsandro.pimenta/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
     "/Users/alexsandro.pimenta/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

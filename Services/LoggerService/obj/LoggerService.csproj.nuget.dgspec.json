@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
-        "projectName": "Acades.Entities",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
+        "projectName": "Acades.Dto",
+        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -85,6 +85,63 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "projectName": "Acades.Entities",
+        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

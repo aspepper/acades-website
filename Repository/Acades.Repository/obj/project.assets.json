@@ -1497,10 +1497,21 @@
           "bin/placeholder/Acades.Contracts.dll": {}
         }
       },
+      "Acades.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Acades.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Acades.Dto.dll": {}
+        }
+      },
       "Acades.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Acades.Dto": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9"
         },
@@ -5708,10 +5719,15 @@
       "path": "../../Contracts/Acades.Contracts/Acades.Contracts.csproj",
       "msbuildProject": "../../Contracts/Acades.Contracts/Acades.Contracts.csproj"
     },
+    "Acades.Dto/1.0.0": {
+      "type": "project",
+      "path": "../../Models/Acades.Dto/Acades.Dto.csproj",
+      "msbuildProject": "../../Models/Acades.Dto/Acades.Dto.csproj"
+    },
     "Acades.Entities/1.0.0": {
       "type": "project",
-      "path": "../../Models/Acades.Entities/Acades.Entities.csproj",
-      "msbuildProject": "../../Models/Acades.Entities/Acades.Entities.csproj"
+      "path": "../../Models/acades.entities/Acades.Entities.csproj",
+      "msbuildProject": "../../Models/acades.entities/Acades.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5754,8 +5770,8 @@
             "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
               "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj"
             },
-            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
-              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
             }
           }
         }

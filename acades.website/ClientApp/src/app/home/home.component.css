@@ -1,39 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-.seccion_fullwidth {
-  z-index: 11;
-  width: 102%;
-  margin-left: -1vw;
-  position: relative;
-  align-content: center;
-}
-
 .home_top_background img {
   width: 100%;
 }
 
 .home_top {
   height: 38vw;
-}
-
-.image-logo {
-  background-image: url("../../assets/images/logo-header.png");
-}
-
-.text_color_lead {
-  color: #3f78ba;
-}
-
-.background_color_prata {
-  background-color: #e6e6e6;
-}
-
-.background_color_cinza_faixa {
-  background-color: #ced2da;
 }
 
 .content_icons {
@@ -75,42 +45,3 @@
     font-size: 2vw;
   }
 }
-
-.bg-color-tm-yellow {
-  background-color: #f3ba31;
-}
-
-.bg-color-tm-bluelight {
-  background-color: #47a8de;
-}
-
-.bg-color-tm-blue {
-  background-color: #3f78ba;
-}
-
-.bg-color-tm-bluedark {
-  background-color: #2b3d4f;
-}
-
-.txt-color-tm-yellow {
-  color: #f3ba31;
-}
-
-.txt-color-tm-bluelight {
-  color: #47a8de;
-}
-
-.txt-color-tm-blue {
-  color: #3f78ba;
-}
-
-.txt-color-tm-bluedark {
-  color: #2b3d4f;
-}
-
-.txt-shadow {
-  text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-
-
