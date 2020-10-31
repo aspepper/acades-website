@@ -66,7 +66,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
     ]);
     this.email = new FormControl('', [
       Validators.required,
-      Validators.pattern("[^ @]*@[^ @]*"),
+      //Validators.pattern("[^ @]*@[^ @]*"),
       emailDomainValidator
     ]);
     this.document = new FormControl('', [

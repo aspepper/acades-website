@@ -82,25 +82,29 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="filterProductId">Cargo</label>
-                        <ng-select bindLabel="description"
-                                   bindValue="id"
-                                   [(ngModel)]="cargoIds"
-                                   [closeOnSelect]="true"
-                                   [searchable]="true"
-                                   [multiple]="true"
-                                   [items]="roles">
-                        </ng-select>
-                        <div class="form-control-feedback" *ngIf="filterProductId.errors && (filterProductId.dirty || filterProductId.touched)">
-                            <p *ngIf="filterProductId.errors.required">O Cargo é obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="passwordCompare">Senha Novamente</label>
                         <input type="password" id="passwordCompare" class="form form-control input-password" formControlName="passwordCompare"
                                [ngClass]="{'is-invalid': passwordCompare.invalid && (passwordCompare.dirty || passwordCompare.touched), 'is-valid': passwordCompare.valid && (passwordCompare.dirty || passwordCompare.touched)}">
                     </div>
+
+                    <ng-container>
+                        <div class="form-group dropdown" ngbDropdown>
+                            <label for="filterProductId">Cargo</label>
+                            <div class="dropdown">
+                                <ng-select bindLabel="description"
+                                           bindValue="id"
+                                           [(ngModel)]="cargoIds"
+                                           [closeOnSelect]="true"
+                                           [searchable]="true"
+                                           [multiple]="true"
+                                           [items]="roles">
+                                </ng-select>
+                            </div>
+                            <div class="form-control-feedback" *ngIf="filterProductId.errors && (filterProductId.dirty || filterProductId.touched)">
+                                <p *ngIf="filterProductId.errors.required">O Cargo é obrigatório.</p>
+                            </div>
+                        </div>
+                    </ng-container>
 
                     <div class="form-group">
                         <button class="btn btn-success float-right mr-4" type="submit" [disabled]="!form.valid">Enviar</button>
