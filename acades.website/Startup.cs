@@ -56,17 +56,7 @@ namespace Acades.Website
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
-
-                //endpoints.MapControllerRoute(
-                //    name: "carrer",
-                //    pattern: "{controller}/save",
-                //    defaults: new { controller = "carrer", action = "save" });
             });
-
-            //endpoints.MapControllerRoute(
-            //name: "carrer",
-            //pattern: "{controller}/save",
-            //defaults: new { controller = "carrer", action = "save" });
 
             app.UseSpa(spa =>
             {

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using Acades.Entities;
 using Microsoft.Extensions.Configuration;
 using Acades.Dto;
+using Newtonsoft.Json;
 
 namespace Acades.API.Controllers
 {
@@ -30,11 +31,18 @@ namespace Acades.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IList<RoleDto>> Get()
+        public async Task<IActionResult> Get()
         {
-            var roles = await buzz.GetListRoles();
+            try
+            {
+                var roles = await buzz.GetListRoles();
 
-            return roles;
+                return Ok(roles);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(JsonConvert.SerializeObject(ex));
+            }
 
         }
 

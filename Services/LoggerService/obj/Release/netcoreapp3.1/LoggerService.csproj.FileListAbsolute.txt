@@ -11,3 +11,5 @@
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/obj/Release/netcoreapp3.1/LoggerService.csproj.CopyComplete
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/obj/Release/netcoreapp3.1/LoggerService.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/obj/Release/netcoreapp3.1/LoggerService.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/bin/Release/netcoreapp3.1/Acades.Dto.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/bin/Release/netcoreapp3.1/Acades.Dto.pdb

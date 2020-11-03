@@ -41,73 +41,124 @@
 
     <div class="col-10">
         <div class="d-flex justify-content-center align-items-center ">
-            <form [formGroup]="form" (ngSubmit)="enrollment()">
+            <form class="form" [formGroup]="formCareer" (ngSubmit)="enrollment($event)">
 
                 <div class="card p-3 card-form">
 
                     <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" class="form form-control input-name" formControlName="nome"
-                               [ngClass]="{'is-invalid': nome.invalid && (nome.dirty || nome.touched), 'is-valid': nome.valid && (nome.dirty || nome.touched)}">
-                        <div class="form-control-feedback" *ngIf="nome.errors && (nome.dirty || nome.touched)">
-                            <p *ngIf="nome.errors.required">O nome é Obrigatório.</p>
+                        <label for="name" class="sr-only">Nome Completo</label>
+                        <input type="text" id="name"
+                               class="form form-control input-name"
+                               formControlName="name"
+                               placeholder="Entre o nome completo"
+                               [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
+                                             'is-valid': name.valid && (name.dirty || name.touched),
+                                       'form-submitted': formSubmitted}">
+                        <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+                            <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" class="form form-control input-email" formControlName="email"
-                               [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched), 'is-valid': email.valid && (email.dirty || email.touched)}">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="text"
+                               id="email"
+                               class="form form-control input-email"
+                               formControlName="email"
+                               placeholder="Entre o seu e-mail"
+                               [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
+                                             'is-valid': email.valid && (email.dirty || email.touched),
+                                       'form-submitted': formSubmitted}">
                         <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
                             <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="document">CPF</label>
-                        <input type="text" id="document" class="form form-control input-document" formControlName="document"
-                               [ngClass]="{'is-invalid': document.invalid && (document.dirty || document.touched), 'is-valid': document.valid && (email.dirty || document.touched)}">
+                        <label for="document" class="sr-only">CPF</label>
+                        <input type="text"
+                               id="document"
+                               class="form form-control input-document"
+                               formControlName="document"
+                               placeholder="Entre o CPF"
+                               [specialCharacters]="[ '.', '-' ]"
+                               mask="000.000.000-00"
+                               [ngClass]="{'is-invalid': document.invalid && (document.dirty || document.touched),
+                                             'is-valid': document.valid && (document.dirty || document.touched),
+                                       'form-submitted': formSubmitted}">
+
                         <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
                             <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" class="form form-control input-password" formControlName="password"
-                               [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched), 'is-valid': password.valid && (password.dirty || password.touched)}">
+                        <label for="birthDate" class="sr-only">Data de Nascimento</label>
+                        <input type="text"
+                               id="document"
+                               class="form form-control input-birthDate"
+                               formControlName="birthDate"
+                               placeholder="Digite a data de nascimento"
+                               [specialCharacters]="[ '/' ]"
+                               mask="00/00/0000"
+                               [ngClass]="{'is-invalid': birthDate.invalid && (birthDate.dirty || birthDate.touched),
+                                             'is-valid': birthDate.valid && (birthDate.dirty || birthDate.touched),
+                                       'form-submitted': formSubmitted}">
+                        <div class="form-control-feedback" *ngIf="birthDate.errors && (birthDate.dirty || birthDate.touched)">
+                            <p *ngIf="birthDate.errors.required">A Data de nascimento é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Senha</label>
+                        <input type="password"
+                               id="password"
+                               class="form form-control input-password"
+                               formControlName="password"
+                               placeholder="Digite uma senha"
+                               [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched),
+                                             'is-valid': password.valid && (password.dirty || password.touched),
+                                       'form-submitted': formSubmitted}">
                         <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
                             <p *ngIf="password.errors.required">A Senha é Obrigatória.</p>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="passwordCompare">Senha Novamente</label>
-                        <input type="password" id="passwordCompare" class="form form-control input-password" formControlName="passwordCompare"
-                               [ngClass]="{'is-invalid': passwordCompare.invalid && (passwordCompare.dirty || passwordCompare.touched), 'is-valid': passwordCompare.valid && (passwordCompare.dirty || passwordCompare.touched)}">
+                        <label for="passwordCompare" class="sr-only">Senha Novamente</label>
+                        <input type="password"
+                               id="passwordCompare"
+                               class="form form-control input-passwordCompare"
+                               formControlName="passwordCompare"
+                               placeholder="Digite a senha novamente"
+                               [ngClass]="{'is-invalid': passwordCompare.invalid && (passwordCompare.dirty || passwordCompare.touched),
+                                             'is-valid': passwordCompare.valid && (passwordCompare.dirty || passwordCompare.touched),
+                                       'form-submitted': formSubmitted}">
                     </div>
 
-                    <ng-container>
-                        <div class="form-group dropdown" ngbDropdown>
-                            <label for="filterProductId">Cargo</label>
-                            <div class="dropdown">
-                                <ng-select bindLabel="description"
-                                           bindValue="id"
-                                           [(ngModel)]="cargoIds"
-                                           [closeOnSelect]="true"
-                                           [searchable]="true"
-                                           [multiple]="true"
-                                           [items]="roles">
-                                </ng-select>
-                            </div>
-                            <div class="form-control-feedback" *ngIf="filterProductId.errors && (filterProductId.dirty || filterProductId.touched)">
-                                <p *ngIf="filterProductId.errors.required">O Cargo é obrigatório.</p>
-                            </div>
+                    <div class="form-group">
+                        <label for="roleIds" class="sr-only">Cargo(s)</label>
+                        <ng-select bindLabel="description"
+                                   bindValue="id"
+                                   formControlName="roleIds"
+                                   placeholder="Informe o(s) Cargo(s) que atua"
+                                   class="input-roleIds form"
+                                   [closeOnSelect]="true"
+                                   [searchable]="true"
+                                   [multiple]="true"
+                                   [items]="roles"
+                                   [ngClass]="{'is-invalid': roleIds.invalid && (roleIds.dirty || roleIds.touched),
+                                                 'is-valid': roleIds.valid && (roleIds.dirty || roleIds.touched),
+                                       'form-submitted': formSubmitted}">
+                        </ng-select>
+                        <div class="form-control-feedback" *ngIf="roleIds.errors && (roleIds.dirty || roleIds.touched)">
+                            <p *ngIf="roleIds.errors.required">O Cargo é obrigatório.</p>
                         </div>
-                    </ng-container>
+                    </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success float-right mr-4" type="submit" [disabled]="!form.valid">Enviar</button>
+                        <button class="btn btn-success float-right mr-2" (click)="clearForm()">Limpar</button>
+                        <button class="btn btn-success float-right mr-4" [disabled]="!formCareer.valid" type="submit">Enviar</button>
                     </div>
                 </div>
 
@@ -118,4 +169,3 @@
 
     <div class="col-1"></div>
 </div>
-

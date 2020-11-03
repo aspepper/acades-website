@@ -1,28 +1,15 @@
 import { Component, NgModule, OnInit, AfterViewInit } from '@angular/core';
 import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { NgxMaskModule } from 'ngx-mask'
+import * as $ from 'jquery';
+import 'bootstrap';
 import { Person } from '../shared/models/person';
 import { User } from '../shared/models/user';
 import { Role } from '../shared/models/role';
 import { AccountService } from '../shared/services/account.services'
-import * as $ from 'jquery';
-import 'bootstrap';
 import { PersonRole } from '../shared/models/personRole';
-
-function emailDomainValidator(control: FormControl) {
-  let email = control.value;
-  if (email && email.indexOf("@") != -1) {
-    let [_, domain] = email.split("@");
-    if (domain !== "codecraft.tv") {
-      return {
-        emailDomain: {
-          parsedDomain: domain
-        }
-      }
-    }
-  }
-  return null;
-}
+import { DateValidator } from '../shared/services/form-validators.services';
 
 @Component({
   selector: 'app-career',
@@ -31,14 +18,16 @@ function emailDomainValidator(control: FormControl) {
 })
 export class CareerComponent implements OnInit, AfterViewInit {
 
-  public form: FormGroup;
-  public nome: FormControl;
+  public formCareer: FormGroup;
+  public name: FormControl;
   public email: FormControl;
   public document: FormControl;
   public birthDate: FormControl;
   public password: FormControl;
   public passwordCompare: FormControl;
-  public cargoIds: FormControl;
+  public roleIds: FormControl;
+
+  public formSubmitted = false;
 
   public roles: Role[];
 
@@ -47,7 +36,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
     private http: HttpClient,
     private service: AccountService
   ) {
-    this.createFormControls();
+
     this.createForm();
   }
 
@@ -60,14 +49,14 @@ export class CareerComponent implements OnInit, AfterViewInit {
   }
 
   public createFormControls(): void {
-    this.nome = new FormControl('', [
+
+    this.name = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
     ]);
     this.email = new FormControl('', [
       Validators.required,
-      //Validators.pattern("[^ @]*@[^ @]*"),
-      emailDomainValidator
+      Validators.email
     ]);
     this.document = new FormControl('', [
       Validators.required,
@@ -75,7 +64,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
     ]);
     this.birthDate = new FormControl('', [
       Validators.required,
-      Validators.minLength(10)
+      Validators.minLength(8)
     ]);
     this.password = new FormControl('', [
       Validators.required,
@@ -85,42 +74,71 @@ export class CareerComponent implements OnInit, AfterViewInit {
       Validators.required,
       Validators.minLength(3)
     ]);
-    this.cargoIds = new FormControl('', [
+    this.roleIds = new FormControl('', [
       Validators.required
     ]);
   }
 
   public createForm(): void {
-    this.form = new FormGroup({
-      nome: this.nome,
+
+    this.createFormControls();
+
+    this.formCareer = this.formBuilder.group({
+      name: this.name,
       email: this.email,
       document: this.document,
       birthDate: this.birthDate,
       password: this.password,
       passwordCompare: this.passwordCompare,
-      cargoIds: this.cargoIds
+      roleIds: this.roleIds
     });
   }
 
-  public enrollment(): void {
-    if (this.form.invalid) {
-      alert('Preencha o formulário corretamente');
-      console.log(this.form.errors);
-      return;
-    }
+  public getRoles(): void {
+
+    this.service
+      .GetListRoles()
+      .subscribe(
+        data => {
+          this.roles = data;
+          console.log(this.roles);
+        })
+  }
+
+  public clearForm(): void {
+    this.name.setValue('');
+    this.email.setValue('');
+    this.document.setValue('');
+    this.birthDate.setValue('');
+    this.password.setValue('');
+    this.passwordCompare.setValue('');
+    this.roleIds.setValue('');
+  }
+
+  public enrollment(event): void {
+    event.preventDefault();
+    this.formSubmitted = true;
+
+    console.log(this.formCareer.value);
+
+    const birtYear = parseInt(this.birthDate.value.substr(4, 4));
+    const birtMonth = parseInt(this.birthDate.value.substr(2, 2)) - 1;
+    const birtDate = parseInt(this.birthDate.value.substr(0, 2));
 
     let person = new Person();
-    person.name = this.nome.value;
+    person.name = this.name.value;
     person.document = this.document.value;
-    person.birthDate = this.birthDate.value;
+    person.birthDate = new Date(birtYear, birtMonth, birtDate);
 
-    this.cargoIds.value
-      .split(',')
-      .foreach(e => {
+    console.log(this.roleIds.value);
+    this.roleIds
+      .value
+      .forEach(e => {
         if (person.roles == null) { person.roles = new Array<PersonRole>() }
         this.roles.forEach(r => {
           if (r.id == parseInt(e)) {
             let pr = new PersonRole();
+            //pr.role = r;
             pr.roleId = r.id;
             person.roles.push(pr);
           }
@@ -130,25 +148,24 @@ export class CareerComponent implements OnInit, AfterViewInit {
     console.log("person :: ");
     console.log(person);
 
-
     let user = new User();
     user.email = this.email.value;
     user.password = this.password.value;
 
-    person.user.push(user);
+    console.log(user);
 
-    //this.http.post("/api/carrer/save", person);
+    if (person.users == null) { person.users = new Array<User>(); }
+    person.users.push(user);
 
-  }
+    this.service
+      .SaveCareer(person)
+      .subscribe(data => {
+        alert("Cadastro realizado com sucesso.");
+        this.clearForm();
+      }, (err) => {
+        console.log(err)
+      });
 
-  public getRoles(): void {
-
-    this.service.GetListRoles()
-      .subscribe(
-        data => {
-          this.roles = data;
-          console.log(this.roles);
-        })
   }
 
 }

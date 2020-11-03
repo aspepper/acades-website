@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="acades-services" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^/Users/alexsandro\.pimenta/Projetos/acades/acades/Services/Acades\.API/obj/Release/netcoreapp3\.1/PubTmp/Out/$" />
+  </parameter>
+</parameters>

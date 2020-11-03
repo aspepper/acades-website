@@ -23,11 +23,6 @@ namespace Acades.Website.Controllers
         private readonly IConfiguration _conf;
         private HttpClient client;
 
-        /*
-         HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
-            : base("api/marketing", httpClient, httpContextAccessor 
-         */
-
         public RoleController(ILogger<RoleController> logger, IConfiguration conf)
         {
             _logger = logger;
@@ -35,7 +30,6 @@ namespace Acades.Website.Controllers
             client = new HttpClient();
             client.BaseAddress = new Uri(string.Concat(conf.GetSection("ApiServiceURL").Value, "api/role/"));
         }
-
 
         [HttpGet("get")]
         [ProducesResponseType(StatusCodes.Status200OK)]

@@ -70,6 +70,7 @@ D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/staticweb
 D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.genruntimeconfig.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.Production.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.API.deps.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.API.runtimeconfig.json
@@ -205,7 +206,6 @@ D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.AP
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.Business.pdb
-/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csprojAssemblyReference.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csproj.CoreCompileInputs.cache

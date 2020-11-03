@@ -5,9 +5,9 @@ export class Person {
   id: number;
   name: string;
   document: string;
-  user: Array<User>;
-  roles: Array<PersonRole>;
   birthDate: Date; 
+  users: Array<User>;
+  roles: Array<PersonRole>;
   isDeleted: boolean;
   insertDate: Date;
   insertUser: number;

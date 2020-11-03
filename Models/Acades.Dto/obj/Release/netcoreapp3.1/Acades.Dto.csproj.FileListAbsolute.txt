@@ -1,0 +1,8 @@
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/bin/Release/netcoreapp3.1/Acades.Dto.deps.json
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/bin/Release/netcoreapp3.1/Acades.Dto.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/bin/Release/netcoreapp3.1/Acades.Dto.pdb
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.AssemblyInfoInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.AssemblyInfo.cs
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.csproj.CoreCompileInputs.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.pdb

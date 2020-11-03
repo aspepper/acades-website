@@ -6,6 +6,11 @@ using Acades.Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Acades.Business;
+using Microsoft.Extensions.Options;
+using Acades.Entities;
+using Microsoft.Extensions.Configuration;
+using Acades.Dto;
+using Newtonsoft.Json;
 
 namespace Acades.API.Controllers
 {
@@ -13,6 +18,14 @@ namespace Acades.API.Controllers
     [ApiController]
     public class CarrerController : ControllerBase
     {
+
+        protected CarrerBusiness buzz;
+
+        public CarrerController(RepositoryContext context, IConfiguration conf)
+        {
+            buzz = new CarrerBusiness(context, conf);
+        }
+
         // GET: api/Carrer
         [HttpGet]
         public IEnumerable<string> Get()
@@ -29,10 +42,20 @@ namespace Acades.API.Controllers
 
         // POST: api/Carrer
         [HttpPost("Save")]
-        public async Task<int> Post([FromBody] Person person, [FromServices] CarrerBusiness buzz)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult> Post([FromBody] Person person)
         {
-            var Id = await buzz.Insert(person);
-            return Id;
+            try
+            {
+                var Id = await buzz.Insert(person);
+                return Ok(Id);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(JsonConvert.SerializeObject(ex));
+            }
         }
 
         // PUT: api/Carrer/5

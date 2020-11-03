@@ -15,3 +15,5 @@
 /Users/alexsandro.pimenta/Projetos/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.genruntimeconfig.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Repository/Acades.Repository/bin/Release/netcoreapp3.1/Acades.Dto.dll
+/Users/alexsandro.pimenta/Projetos/acades/acades/Repository/Acades.Repository/bin/Release/netcoreapp3.1/Acades.Dto.pdb
