@@ -5675,8 +5675,8 @@
     },
     "Acades.Entities/1.0.0": {
       "type": "project",
-      "path": "../../Models/acades.entities/Acades.Entities.csproj",
-      "msbuildProject": "../../Models/acades.entities/Acades.Entities.csproj"
+      "path": "../../Models/Acades.Entities/Acades.Entities.csproj",
+      "msbuildProject": "../../Models/Acades.Entities/Acades.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5712,8 +5712,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
             }
           }
         }

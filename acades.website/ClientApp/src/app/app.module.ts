@@ -1,11 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from "ngx-mask";
+
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -48,7 +53,9 @@ import { UserCasesComponent } from './user-cases/user-cases.component';
       { path: 'contact-us', component: ContactUsComponent },
     ])
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: "pt-BR" }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

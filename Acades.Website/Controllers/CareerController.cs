@@ -1,15 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Acades.Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Acades.Business;
 using Microsoft.Extensions.Configuration;
 using System.Net.Http;
-using Acades.Dto;
 using Newtonsoft.Json;
 using System.Text;
 using System.Net.Http.Headers;

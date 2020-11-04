@@ -96,7 +96,7 @@
                         <label for="birthDate" class="sr-only">Data de Nascimento</label>
                         <input type="text"
                                id="document"
-                               class="form form-control input-birthDate"
+                               class="form form-control input"
                                formControlName="birthDate"
                                placeholder="Digite a data de nascimento"
                                [specialCharacters]="[ '/' ]"
@@ -113,7 +113,7 @@
                         <label for="password" class="sr-only">Senha</label>
                         <input type="password"
                                id="password"
-                               class="form form-control input-password"
+                               class="form-control input-password"
                                formControlName="password"
                                placeholder="Digite uma senha"
                                [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched),
@@ -128,7 +128,7 @@
                         <label for="passwordCompare" class="sr-only">Senha Novamente</label>
                         <input type="password"
                                id="passwordCompare"
-                               class="form form-control input-passwordCompare"
+                               class="form form-control input-password"
                                formControlName="passwordCompare"
                                placeholder="Digite a senha novamente"
                                [ngClass]="{'is-invalid': passwordCompare.invalid && (passwordCompare.dirty || passwordCompare.touched),

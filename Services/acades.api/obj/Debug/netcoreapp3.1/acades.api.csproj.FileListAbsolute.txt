@@ -218,3 +218,4 @@ D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.AP
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.genruntimeconfig.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csprojAssemblyReference.cache

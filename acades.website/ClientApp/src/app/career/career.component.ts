@@ -7,7 +7,7 @@ import 'bootstrap';
 import { Person } from '../shared/models/person';
 import { User } from '../shared/models/user';
 import { Role } from '../shared/models/role';
-import { AccountService } from '../shared/services/account.services'
+import { AccountService } from '../shared/services/account.services';
 import { PersonRole } from '../shared/models/personRole';
 import { DateValidator } from '../shared/services/form-validators.services';
 
@@ -106,13 +106,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
   }
 
   public clearForm(): void {
-    this.name.setValue('');
-    this.email.setValue('');
-    this.document.setValue('');
-    this.birthDate.setValue('');
-    this.password.setValue('');
-    this.passwordCompare.setValue('');
-    this.roleIds.setValue('');
+    this.createForm();
   }
 
   public enrollment(event): void {
@@ -138,7 +132,6 @@ export class CareerComponent implements OnInit, AfterViewInit {
         this.roles.forEach(r => {
           if (r.id == parseInt(e)) {
             let pr = new PersonRole();
-            //pr.role = r;
             pr.roleId = r.id;
             person.roles.push(pr);
           }
@@ -163,7 +156,8 @@ export class CareerComponent implements OnInit, AfterViewInit {
         alert("Cadastro realizado com sucesso.");
         this.clearForm();
       }, (err) => {
-        console.log(err)
+          console.log(err);
+          alert("Ocorreu um erro no cadastro. Tente mais tarde.");
       });
 
   }

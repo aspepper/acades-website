@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
               }
             }
           }
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
               }
             }
           }
@@ -171,14 +171,14 @@
         }
       }
     },
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
         "projectName": "Acades.Entities",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -277,8 +277,8 @@
               "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
                 "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj"
               },
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
               }
             }
           }
