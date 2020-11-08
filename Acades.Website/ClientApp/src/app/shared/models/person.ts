@@ -1,5 +1,6 @@
 import { User } from './user'
 import { PersonRole } from './personRole';
+import { File } from './file';
 
 export class Person {
   id: number;
@@ -8,6 +9,7 @@ export class Person {
   birthDate: Date; 
   users: Array<User>;
   roles: Array<PersonRole>;
+  files: Array<File>;
   isDeleted: boolean;
   insertDate: Date;
   insertUser: number;

@@ -19,6 +19,105 @@ namespace Acades.Entities.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Acades.Entities.Models.File", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FileExtension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileNameOriginal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FileTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 656, DateTimeKind.Local).AddTicks(7920));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<string>("Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 657, DateTimeKind.Local).AddTicks(4430));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FileTypeId");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("File");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.FileType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 661, DateTimeKind.Local).AddTicks(5960));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 662, DateTimeKind.Local).AddTicks(2410));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FileType");
+                });
+
             modelBuilder.Entity("Acades.Entities.Models.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -37,7 +136,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 181, DateTimeKind.Local).AddTicks(1170));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 592, DateTimeKind.Local).AddTicks(3840));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -57,7 +156,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 216, DateTimeKind.Local).AddTicks(2520));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 627, DateTimeKind.Local).AddTicks(4020));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -79,7 +178,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 234, DateTimeKind.Local).AddTicks(7210));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 647, DateTimeKind.Local).AddTicks(3330));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -100,7 +199,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 235, DateTimeKind.Local).AddTicks(5760));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 647, DateTimeKind.Local).AddTicks(8940));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -129,7 +228,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 228, DateTimeKind.Local).AddTicks(6430));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 640, DateTimeKind.Local).AddTicks(1950));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -144,7 +243,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 229, DateTimeKind.Local).AddTicks(2070));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 640, DateTimeKind.Local).AddTicks(8080));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -169,7 +268,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 223, DateTimeKind.Local).AddTicks(7130));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 635, DateTimeKind.Local).AddTicks(7030));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -190,7 +289,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 27, 20, 32, 24, 224, DateTimeKind.Local).AddTicks(2560));
+                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 636, DateTimeKind.Local).AddTicks(4290));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -202,6 +301,19 @@ namespace Acades.Entities.Migrations
                     b.HasIndex("PersonId");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.File", b =>
+                {
+                    b.HasOne("Acades.Entities.Models.FileType", "FileType")
+                        .WithMany("Files")
+                        .HasForeignKey("FileTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Acades.Entities.Models.Person", "Person")
+                        .WithMany("Files")
+                        .HasForeignKey("PersonId");
                 });
 
             modelBuilder.Entity("Acades.Entities.Models.PersonRole", b =>

@@ -21,7 +21,10 @@ namespace Acades.Business
         public async Task<int> Insert(Person person)
         {
             context.Add(person);
-            return await context.SaveChangesAsync(true);
+            _ = context.SaveChanges(true);
+
+            return await Task.FromResult<int>(person.Id);
+
         }
 
     }

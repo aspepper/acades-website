@@ -17,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +39,8 @@
     <Folder Include="ClientApp\src\app\shared\models\" />
     <Folder Include="ClientApp\src\assets\scripts\" />
     <Folder Include="ClientApp\src\app\shared\services\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ClientApp\dist\styles.21740b8d4fc1f43f5604.css" />
@@ -78,6 +81,23 @@
     <None Remove="ClientApp\dist\assets\images\customer_logo_duratex.jpg" />
     <None Remove="ClientApp\dist\styles.27945d942ea95ca3397d.css" />
     <None Remove="ClientApp\dist\assets\images\services_data_analytics.png" />
+    <None Remove="ClientApp\dist\scripts.111b4a186e0a9a34c01d.js" />
+    <None Remove="ClientApp\dist\scripts.111b4a186e0a9a34c01d.js.LICENSE.txt" />
+    <None Remove="ClientApp\dist\styles.2355d85ca475dec16afd.css" />
+    <None Remove="ClientApp\dist\assets\images\services_ia.png" />
+    <None Remove="ClientApp\dist\assets\images\services_business_intelligence.png" />
+    <None Remove="ClientApp\dist\assets\images\services_data_science.png" />
+    <None Remove="ClientApp\dist\assets\images\contact_us_banner.jpg" />
+    <None Remove="ClientApp\dist\assets\images\mapa_acades.png" />
+    <None Remove="ClientApp\dist\assets\images\logo_acades_header.png" />
+    <None Remove="ClientApp\dist\assets\images\services_machine_learning.png" />
+    <None Remove="ClientApp\dist\assets\scripts\fake-chat.png" />
+    <None Remove="ClientApp\dist\assets\scripts\burger.svg" />
+    <None Remove="ClientApp\dist\assets\scripts\custom-settings.png" />
+    <None Remove="ClientApp\dist\assets\scripts\whatsapp.svg" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.css" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.min.css" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.min.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Acades.Entities\Acades.Entities.csproj">

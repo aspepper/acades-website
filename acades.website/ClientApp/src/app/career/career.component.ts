@@ -1,15 +1,18 @@
 import { Component, NgModule, OnInit, AfterViewInit } from '@angular/core';
 import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
 import * as $ from 'jquery';
 import 'bootstrap';
 import { Person } from '../shared/models/person';
 import { User } from '../shared/models/user';
 import { Role } from '../shared/models/role';
+import { File } from '../shared/models/file';
+import { FileType, FileTypes } from '../shared/models/file-type';
 import { AccountService } from '../shared/services/account.services';
 import { PersonRole } from '../shared/models/personRole';
 import { DateValidator } from '../shared/services/form-validators.services';
+import { UploadService } from '../shared/services/upload.services';
 
 @Component({
   selector: 'app-career',
@@ -26,15 +29,21 @@ export class CareerComponent implements OnInit, AfterViewInit {
   public password: FormControl;
   public passwordCompare: FormControl;
   public roleIds: FormControl;
+  public resumeFileName: FormControl;
+
+  public filename = '';
 
   public formSubmitted = false;
 
   public roles: Role[];
 
+  public resume: File;
+
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private service: AccountService
+    private service: AccountService,
+    private uploadService: UploadService
   ) {
 
     this.createForm();
@@ -77,6 +86,9 @@ export class CareerComponent implements OnInit, AfterViewInit {
     this.roleIds = new FormControl('', [
       Validators.required
     ]);
+    this.resumeFileName = new FormControl('', [
+      Validators.required
+    ])
   }
 
   public createForm(): void {
@@ -90,7 +102,8 @@ export class CareerComponent implements OnInit, AfterViewInit {
       birthDate: this.birthDate,
       password: this.password,
       passwordCompare: this.passwordCompare,
-      roleIds: this.roleIds
+      roleIds: this.roleIds,
+      resumeFileName: this.resumeFileName
     });
   }
 
@@ -107,6 +120,51 @@ export class CareerComponent implements OnInit, AfterViewInit {
 
   public clearForm(): void {
     this.createForm();
+  }
+
+  public setFilename(files): void {
+    if (files[0]) {
+      this.filename = files[0].name;
+    }
+    this.save(files);
+  }
+
+  public save(files): void {
+    const formData = new FormData();
+
+    if (files[0]) {
+      formData.append(files[0].name, files[0]);
+    }
+
+    this.uploadService
+      .upload(formData)
+      .subscribe(fileUploaded => {
+
+        this.resume = new File();
+        this.resume.fileExtension = fileUploaded.extension;
+        this.resume.fileName = fileUploaded.fileName;
+        this.resume.fileNameOriginal = fileUploaded.fileNameOriginal;
+        this.resume.path = fileUploaded.absoluteUri;
+        this.resume.fileTypeId = FileTypes.Curriculo;
+        this.resume.insertDate = new Date();
+        this.resume.insertUser = 1;
+        this.resume.updateDate = new Date();
+        this.resume.updateUser = 1;
+
+        this.uploadService
+          .uploadResume(this.resume)
+          .subscribe(id => {
+            this.resume.id = id;
+
+            this.resumeFileName.setValue(this.resume.fileNameOriginal);
+
+            console.log(this.resume);
+
+          });
+
+
+      })
+
   }
 
   public enrollment(event): void {
@@ -138,9 +196,6 @@ export class CareerComponent implements OnInit, AfterViewInit {
         })
       });
 
-    console.log("person :: ");
-    console.log(person);
-
     let user = new User();
     user.email = this.email.value;
     user.password = this.password.value;
@@ -150,14 +205,30 @@ export class CareerComponent implements OnInit, AfterViewInit {
     if (person.users == null) { person.users = new Array<User>(); }
     person.users.push(user);
 
+    console.log("person :: ");
+    console.log(person);
+
     this.service
       .SaveCareer(person)
-      .subscribe(data => {
+      .subscribe(personId => {
+
+        if (this.resume != null) {
+          this.resume.personId = personId;
+
+          this.uploadService
+            .uploadResume(this.resume)
+            .subscribe(id => {
+
+              console.log(this.resume);
+
+            });
+        }
+
         alert("Cadastro realizado com sucesso.");
         this.clearForm();
       }, (err) => {
-          console.log(err);
-          alert("Ocorreu um erro no cadastro. Tente mais tarde.");
+        console.log(err);
+        alert("Ocorreu um erro no cadastro. Tente mais tarde.");
       });
 
   }

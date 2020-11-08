@@ -25,8 +25,10 @@ namespace Acades.Website.Controllers
         {
             _logger = logger;
             _conf = conf;
-            client = new HttpClient();
-            client.BaseAddress = new Uri(string.Concat(conf.GetSection("ApiServiceURL").Value, "api/Carrer/"));
+            client = new HttpClient
+            {
+                BaseAddress = new Uri(string.Concat(conf.GetSection("ApiServiceURL").Value, "api/Carrer/"))
+            };
         }
 
         [HttpGet("get")]

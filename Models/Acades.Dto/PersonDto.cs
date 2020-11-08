@@ -28,5 +28,7 @@ namespace Acades.Dto
 
         public IList<PersonRoleDto> Roles { get; set; }
 
+        public IList<FileDto> Files { get; set; }
+
     }
 }

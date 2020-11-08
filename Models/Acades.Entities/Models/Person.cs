@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Acades.Dto;
 
@@ -30,6 +31,8 @@ namespace Acades.Entities.Models
 
         public ICollection<PersonRole> Roles { get; set; }
 
+        public ICollection<File> Files { get; set; }
+
 
         public static Expression<Func<Person, PersonDto>> ToDto()
         {
@@ -39,6 +42,9 @@ namespace Acades.Entities.Models
                 Name = c.Name,
                 Document = c.Document,
                 BirthDate = c.BirthDate,
+                Users = c.Users != null ? c.Users.Select(e => User.ToDto(e)).ToList() : null,
+                Roles = c.Roles != null ? c.Roles.Select(e => PersonRole.ToDto(e)).ToList() : null,
+                Files = c.Files != null ? c.Files.Select(e => File.ToDto(e)).ToList() : null,
                 IsDeleted = c.IsDeleted,
                 InsertDate = c.InsertDate,
                 InsertUser = c.InsertUser,
@@ -54,6 +60,9 @@ namespace Acades.Entities.Models
                 Name = c.Name,
                 Document = c.Document,
                 BirthDate = c.BirthDate,
+                Users = c.Users?.Select(e => User.ToDto(e)).ToList(),
+                Roles = c.Roles?.Select(e => PersonRole.ToDto(e)).ToList(),
+                Files = c.Files?.Select(e => File.ToDto(e)).ToList(),
                 IsDeleted = c.IsDeleted,
                 InsertDate = c.InsertDate,
                 InsertUser = c.InsertUser,

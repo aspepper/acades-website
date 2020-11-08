@@ -21,6 +21,10 @@ namespace Acades.Entities
 
         public DbSet<PersonRole> PersonRoles { get; set; }
 
+        public DbSet<File> Files { get; set; }
+
+        public DbSet<FileType> FileTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -80,6 +84,36 @@ namespace Acades.Entities
                 p.HasOne(e => e.Role)
                 .WithMany(p => p.Persons)
                 .HasForeignKey(s => s.RoleId);
+
+                p.Property(e => e.IsDeleted).HasDefaultValue(true);
+                p.Property(e => e.InsertDate).HasDefaultValue(DateTime.Now);
+                p.Property(e => e.InsertUser).HasDefaultValue(1);
+                p.Property(e => e.UpdateDate).HasDefaultValue(DateTime.Now);
+                p.Property(e => e.UpdateUser).HasDefaultValue(1);
+            });
+
+            builder.Entity<File>(p =>
+            {
+                p.ToTable("File");
+                p.HasKey(e => e.Id);
+                p.HasOne(e => e.Person)
+                .WithMany(p => p.Files)
+                .HasForeignKey(s => s.PersonId);
+                p.HasOne(e => e.FileType)
+                .WithMany(p => p.Files)
+                .HasForeignKey(s => s.FileTypeId);
+
+                p.Property(e => e.IsDeleted).HasDefaultValue(true);
+                p.Property(e => e.InsertDate).HasDefaultValue(DateTime.Now);
+                p.Property(e => e.InsertUser).HasDefaultValue(1);
+                p.Property(e => e.UpdateDate).HasDefaultValue(DateTime.Now);
+                p.Property(e => e.UpdateUser).HasDefaultValue(1);
+            });
+
+            builder.Entity<FileType>(p =>
+            {
+                p.ToTable("FileType");
+                p.HasKey(e => e.Id);
 
                 p.Property(e => e.IsDeleted).HasDefaultValue(true);
                 p.Property(e => e.InsertDate).HasDefaultValue(DateTime.Now);

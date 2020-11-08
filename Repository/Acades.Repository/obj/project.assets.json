@@ -5726,8 +5726,8 @@
     },
     "Acades.Entities/1.0.0": {
       "type": "project",
-      "path": "../../Models/Acades.Entities/Acades.Entities.csproj",
-      "msbuildProject": "../../Models/Acades.Entities/Acades.Entities.csproj"
+      "path": "../../Models/acades.entities/Acades.Entities.csproj",
+      "msbuildProject": "../../Models/acades.entities/Acades.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5770,8 +5770,8 @@
             "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
               "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj"
             },
-            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
-              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
             }
           }
         }
