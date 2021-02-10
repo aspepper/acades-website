@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {}
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {}
   },
   "projects": {
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
         "projectName": "Acades.Contracts",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Contracts/Acades.Contracts/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -27,9 +27,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
               }
             }
           }
@@ -42,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -57,18 +59,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
         "projectName": "Acades.Dto",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -84,6 +86,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -95,6 +98,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -110,18 +114,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
         "projectName": "Acades.Entities",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -137,9 +141,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
-                "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/Acades.Dto/Acades.Dto.csproj"
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj"
               }
             }
           }
@@ -152,6 +157,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -189,7 +195,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gKqIqkisBqimunvscbUMZHPf5JoE2ZUmoO5TcCaaWqcVFcMX6Q8Y11xAVEjvnfSFr0J0/IiVARNhq6+436KlLg==",
+  "dgSpecHash": "GWS3CWHTcup83wP7O3sWTE40ecb+dXX6Sa0M3XxHdzdvZmuYMJub4ALcyg2eHtH/AVB4sokDc8QLs89r4Dtmcw==",
   "success": true,
-  "projectFilePath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/Acades.API.csproj",
+  "projectFilePath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/Acades.API.csproj",
   "expectedPackageFiles": [
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.aspnetcore.razor/2.2.0/microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

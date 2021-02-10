@@ -71,7 +71,6 @@ D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.AP
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/appsettings.Production.json
-/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.API.deps.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.API.runtimeconfig.json
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/bin/Debug/netcoreapp3.1/Acades.API.runtimeconfig.dev.json
@@ -212,10 +211,11 @@ D:/Projetos/acades-website/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.AP
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csproj.CoreCompileInputs.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.MvcApplicationPartsAssemblyInfo.cache
-/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.RazorTargetAssemblyInfo.cache
-/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csproj.CopyComplete
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/staticwebassets/Acades.API.StaticWebAssets.Manifest.cache
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/staticwebassets/Acades.API.StaticWebAssets.xml
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/scopedcss/bundle/Acades.API.styles.css
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.RazorTargetAssemblyInfo.cache
+/Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.csproj.CopyComplete
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.dll
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.pdb
 /Users/alexsandro.pimenta/Projetos/acades/acades/Services/Acades.API/obj/Debug/netcoreapp3.1/Acades.API.genruntimeconfig.cache

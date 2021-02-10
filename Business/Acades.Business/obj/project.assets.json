@@ -5675,8 +5675,8 @@
     },
     "Acades.Entities/1.0.0": {
       "type": "project",
-      "path": "../../Models/acades.entities/Acades.Entities.csproj",
-      "msbuildProject": "../../Models/acades.entities/Acades.Entities.csproj"
+      "path": "../../Models/Acades.Entities/Acades.Entities.csproj",
+      "msbuildProject": "../../Models/Acades.Entities/Acades.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5691,11 +5691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Business/Acades.Business/Acades.Business.csproj",
+      "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj",
       "projectName": "Acades.Business",
-      "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Business/Acades.Business/Acades.Business.csproj",
+      "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj",
       "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-      "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Business/Acades.Business/obj/",
+      "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5711,9 +5711,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj": {
-              "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Models/acades.entities/Acades.Entities.csproj"
+            "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+              "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
             }
           }
         }
@@ -5726,6 +5727,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -5741,7 +5743,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }

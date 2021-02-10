@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6uAD/Lm7MkhRQ5srObd+0RuQ2jZHEw/iMSbli1q0TK+WOrrxVMwrqNlNBGnzPhNlw5j/UXGOwptqsJX+izXuJw==",
+  "dgSpecHash": "jzU5AHSHrcBCfCtIW3yb5l075ThGxFL4lrcJilcKHT2G/njkPP6xLGeZV8eoOvXFfCcbLAPvFfd5MDVtNxJxyQ==",
   "success": true,
-  "projectFilePath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/LoggerService/LoggerService.csproj",
+  "projectFilePath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj",
   "expectedPackageFiles": [
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

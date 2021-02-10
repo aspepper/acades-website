@@ -1,25 +1,9 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|acades.website">
   <MonoDevelop.Ide.ItemProperties.Acades.Website PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Acades.Website/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Acades.Entities/RepositoryContext.cs">
     <Files>
-      <File FileName="Acades.Website/ClientApp/src/app/career/career.component.html" Line="166" Column="70" />
-      <File FileName="Acades.Website/ClientApp/src/app/career/career.component.ts" Line="222" Column="1" />
-      <File FileName="Business/Acades.Business/RoleBusiness.cs" />
-      <File FileName="Services/Acades.API/Controllers/RoleController.cs" Line="35" Column="1" />
-      <File FileName="Services/Acades.API/Controllers/CarrerController.cs" Line="49" Column="1" />
-      <File FileName="Acades.Website/ClientApp/src/app/shared/services/upload.services.ts" Line="5" Column="1" />
-      <File FileName="Acades.Website/Controllers/FileController.cs" Line="63" Column="1" />
-      <File FileName="Services/Acades.API/Controllers/FileController.cs" Line="67" Column="14" />
-      <File FileName="Business/Acades.Business/FileBusiness.cs" Line="43" Column="22" />
-      <File FileName="Acades.Website/Controllers/CareerController.cs" Line="64" Column="80" />
-      <File FileName="Services/Acades.API/Program.cs" Line="16" Column="1" />
-      <File FileName="Acades.Website/Models/FileUploaded.cs" Line="1" Column="1" />
-      <File FileName="Acades.Website/Controllers/UploadController.cs" Line="1" Column="1" />
-      <File FileName="Acades.Website/ClientApp/src/app/shared/models/file.ts" Line="25" Column="11" />
-      <File FileName="Business/Acades.Business/CarrerBusiness.cs" Line="22" Column="10" />
-      <File FileName="Acades.Website/ClientApp/src/app/shared/services/account.services.ts" Line="24" Column="4" />
-      <File FileName="Acades.Website/appsettings.json" Line="13" Column="20" />
+      <File FileName="Models/Acades.Entities/RepositoryContext.cs" Line="24" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,38 +14,22 @@
             </Node>
             <Node name="Models" expanded="True">
               <Node name="Acades.Entities" expanded="True">
+                <Node name="Dependencies" expanded="True" />
                 <Node name="Models" expanded="True" />
+                <Node name="RepositoryContext.cs" selected="True" />
               </Node>
             </Node>
             <Node name="Services" expanded="True">
               <Node name="Acades.API" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
                 <Node name="Controllers" expanded="True" />
                 <Node name="appsettings.json" expanded="True" />
               </Node>
             </Node>
-            <Node name="Acades.Website" expanded="True" selected="True">
-              <Node name="ClientApp" expanded="True">
-                <Node name="src" expanded="True">
-                  <Node name="app" expanded="True">
-                    <Node name="career" expanded="True" />
-                    <Node name="shared" expanded="True">
-                      <Node name="models" expanded="True" />
-                      <Node name="services" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True">
-                <Node name="PublishProfiles" expanded="True" />
-              </Node>
-            </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

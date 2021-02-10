@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oKObCZS7RnaWUNJXLgI50/RYC6p0xrMUnsR5RbPbdYhyjJJUrx8Q9+TkDc55wUDDflgGapgoAy2b5gJDchazBg==",
+  "dgSpecHash": "DKds8VpShEgsV2zh89qPI6NXjmQ5UuvhvPkt/oO0OOY+DAfYRTbtkFVkGTLxjvPfIpqiyUMw+gns4mgpJQXV7w==",
   "success": true,
-  "projectFilePath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Business/Acades.Business/Acades.Business.csproj",
+  "projectFilePath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj",
   "expectedPackageFiles": [
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/alexsandro.pimenta/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
