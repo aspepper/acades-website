@@ -1,2 +1,39 @@
-body {
+@media screen and (max-width: 960px) {
+  .card-form {
+    width: 100%;
+  }
+
+  .input-name, input-email, input-document, input-password {
+    width: 100%;
+  }
 }
+
+@media screen and (min-width: 961px) {
+  .card-form {
+    width: 60vw;
+  }
+
+  .input-name {
+    width: 100%;
+  }
+
+  .input-email {
+    width: 50%;
+  }
+
+  .input-document {
+    width: 50%;
+  }
+
+  .input-password {
+    width: 50%;
+  }
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  outline: none;
+  color: #fff;
+}
+

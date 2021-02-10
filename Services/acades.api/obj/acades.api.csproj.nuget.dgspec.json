@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/acades.api/acades.api.csproj": {}
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/Acades.API.csproj": {}
   },
   "projects": {
-    "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/acades.api/acades.api.csproj": {
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/acades.api/acades.api.csproj",
-        "projectName": "acades.api",
-        "projectPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/acades.api/acades.api.csproj",
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj",
+        "projectName": "Acades.Business",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj",
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
-        "outputPath": "/Users/alexsandro.pimenta/Projetos/acades/acades/Services/acades.api/obj/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -27,6 +27,125 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
+        "projectName": "Acades.Contracts",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
+        "projectName": "Acades.Dto",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,6 +157,251 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
+        "projectName": "Acades.Entities",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/Acades.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/Acades.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/Acades.Repository.csproj",
+        "projectName": "Acades.Repository",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/Acades.Repository.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj"
+              },
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/Acades.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/Acades.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/Acades.API.csproj",
+        "projectName": "Acades.API",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/Acades.API.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/Acades.API/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/Acades.Business.csproj"
+              },
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/Acades.Repository.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/Acades.Repository.csproj"
+              },
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,7 +420,72 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-preview.7.20366.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj",
+        "projectName": "LoggerService",
+        "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/LoggerService.csproj",
+        "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
+        "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj": {
+                "projectPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/Acades.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

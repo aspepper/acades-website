@@ -10,10 +10,14 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <RootNamespace>Acades.Website</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'acades.website' " />
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +35,12 @@
     <Folder Include="ClientApp\src\app\contact-us\" />
     <Folder Include="ClientApp\src\assets\images\" />
     <Folder Include="ClientApp\src\app\footer\" />
+    <Folder Include="ClientApp\src\app\shared\" />
+    <Folder Include="ClientApp\src\app\shared\models\" />
+    <Folder Include="ClientApp\src\assets\scripts\" />
+    <Folder Include="ClientApp\src\app\shared\services\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ClientApp\dist\styles.21740b8d4fc1f43f5604.css" />
@@ -51,6 +61,51 @@
     <None Remove="ClientApp\dist\assets\images\icon_aws_service.png" />
     <None Remove="ClientApp\dist\assets\images\icon_etl_service.png" />
     <None Remove="ClientApp\dist\assets\images\icon_agile_service.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_old.jpg" />
+    <None Remove="ClientApp\dist\assets\images\home_top.png" />
+    <None Remove="ClientApp\dist\assets\images\about_us_top.jpg" />
+    <None Remove="ClientApp\dist\scripts.fc065b8f86ba80c666e4.js.LICENSE.txt" />
+    <None Remove="ClientApp\dist\scripts.fc065b8f86ba80c666e4.js" />
+    <None Remove="ClientApp\dist\assets\images\home_top_004.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_003.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_002.png" />
+    <None Remove="ClientApp\dist\assets\images\home_top_001.png" />
+    <None Remove="ClientApp\dist\assets\images\values_busines.png" />
+    <None Remove="ClientApp\dist\assets\images\carrer_banner.jpg" />
+    <None Remove="ClientApp\dist\assets\images\alex_profile_prof.png" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_movida.jpg" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_ltm.jpg" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_ybymartech.gif" />
+    <None Remove="ClientApp\dist\assets\images\logo_marca_vertical.jpg" />
+    <None Remove="ClientApp\dist\assets\images\logo_marca_vertical.png" />
+    <None Remove="ClientApp\dist\assets\images\customer_logo_duratex.jpg" />
+    <None Remove="ClientApp\dist\styles.27945d942ea95ca3397d.css" />
+    <None Remove="ClientApp\dist\assets\images\services_data_analytics.png" />
+    <None Remove="ClientApp\dist\scripts.111b4a186e0a9a34c01d.js" />
+    <None Remove="ClientApp\dist\scripts.111b4a186e0a9a34c01d.js.LICENSE.txt" />
+    <None Remove="ClientApp\dist\styles.2355d85ca475dec16afd.css" />
+    <None Remove="ClientApp\dist\assets\images\services_ia.png" />
+    <None Remove="ClientApp\dist\assets\images\services_business_intelligence.png" />
+    <None Remove="ClientApp\dist\assets\images\services_data_science.png" />
+    <None Remove="ClientApp\dist\assets\images\contact_us_banner.jpg" />
+    <None Remove="ClientApp\dist\assets\images\mapa_acades.png" />
+    <None Remove="ClientApp\dist\assets\images\logo_acades_header.png" />
+    <None Remove="ClientApp\dist\assets\images\services_machine_learning.png" />
+    <None Remove="ClientApp\dist\assets\scripts\fake-chat.png" />
+    <None Remove="ClientApp\dist\assets\scripts\burger.svg" />
+    <None Remove="ClientApp\dist\assets\scripts\custom-settings.png" />
+    <None Remove="ClientApp\dist\assets\scripts\whatsapp.svg" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.css" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.min.css" />
+    <None Remove="ClientApp\dist\assets\scripts\floating-wpp.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Acades.Entities\Acades.Entities.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Acades.Business\Acades.Business.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
