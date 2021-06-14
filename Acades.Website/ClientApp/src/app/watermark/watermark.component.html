@@ -1,0 +1,166 @@
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <h3>
+            Venha
+            <small class="text-muted"> fazer parte da nossa história, e fazer a sua história.</small>
+        </h3>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10" ng-non-bindable>
+
+        <div class="shadow p-1 mb-3 bg-white">
+
+            <div id="carouselCarrer" class="carousel " data-ride="carousel" data-interval="1000">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/carrer_banner.jpg" class="img-responsive img-fluid shadow" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="txt-color-tm-white txt-shadow pb-5" style="font-size: 2vw;"><strong>Se você tem espírito empreendedor, tem tudo para crescer conosco...<br /><br /><br /><br /><br /><br /><br /></strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10">
+        <div class="d-flex justify-content-center align-items-center ">
+            <form class="form" [formGroup]="formWatermark   " (ngSubmit)="download($event)">
+
+                <div class="card p-3 card-form">
+
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Nome do Arquivo</label>
+                        <input type="text" id="name"
+                               class="form form-control input-name"
+                               formControlName="name"
+                               placeholder="Entre o nome completo"
+                               [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
+                                             'is-valid': name.valid && (name.dirty || name.touched),
+                                       'form-submitted': formSubmitted}">
+                        <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+                            <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="text"
+                               id="email"
+                               class="form form-control input-email"
+                               formControlName="email"
+                               placeholder="Entre o seu e-mail"
+                               [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
+                                             'is-valid': email.valid && (email.dirty || email.touched),
+                                       'form-submitted': formSubmitted}">
+                        <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+                            <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text1" class="sr-only">Texto 1</label>
+                        <input type="text"
+                               id="text1"
+                               class="form form-control input-document"
+                               formControlName="text1"
+                               placeholder="Entre o texto"
+                               [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
+                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
+                                       'form-submitted': formSubmitted}">
+
+                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
+                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text1" class="sr-only">Texto 1</label>
+                        <input type="text"
+                               id="text1"
+                               class="form form-control input-document"
+                               formControlName="text1"
+                               placeholder="Entre o texto"
+                               [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
+                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
+                                       'form-submitted': formSubmitted}">
+
+                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
+                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>            
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text2" class="sr-only">Texto 2</label>
+                        <input type="text"
+                               id="text2"
+                               class="form form-control input-document"
+                               formControlName="text2"
+                               placeholder="Entre o texto"
+                               [ngClass]="{'is-invalid': text2.invalid && (text2.dirty || text2.touched),
+                                             'is-valid': text2.valid && (text2.dirty || text2.touched),
+                                       'form-submitted': formSubmitted}">
+
+                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
+                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text3" class="sr-only">Texto 3</label>
+                        <input type="text"
+                               id="text3"
+                               class="form form-control input-document"
+                               formControlName="text3"
+                               placeholder="Entre o texto"
+                               [ngClass]="{'is-invalid': text3.invalid && (text3.dirty || text3.touched),
+                                             'is-valid': text3.valid && (text3.dirty || text3.touched),
+                                       'form-submitted': formSubmitted}">
+
+                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
+                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" (click)="fileInput.click()">Selecione o arquivo PDF</button>
+                        <input hidden
+                               #fileInput
+                               type="file"
+                               formControlName="FileName"
+                               id="file"
+                               (change)="setFilename(fileInput.files)" />
+                        <label>{{ FileName.value }}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-success float-right mr-2" (click)="clearForm()">Limpar</button>
+                        <button class="btn btn-success float-right mr-4" [disabled]="!formCareer.valid" type="submit">Enviar</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="col-1"></div>
+</div>
+
+

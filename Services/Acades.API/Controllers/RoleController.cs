@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Acades.Entities.Models;
+using Acades.Business;
+using Acades.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Acades.Business;
-using Microsoft.Extensions.Options;
-using Acades.Entities;
 using Microsoft.Extensions.Configuration;
-using Acades.Dto;
 using Newtonsoft.Json;
 
 namespace Acades.API.Controllers

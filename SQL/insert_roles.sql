@@ -15,3 +15,10 @@ insert into [dbo].[Role]
 ('UX Designer', getdate(), 1, getdate(), 1, 0),
 ('UI Designer', getdate(), 1, getdate(), 1, 0);
 
+
+
+select * from [dbo].[Person];
+
+select * from [dbo].[PersonRole];
+
+select * from [dbo].[User];

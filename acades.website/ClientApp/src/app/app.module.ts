@@ -22,6 +22,7 @@ import { CareerComponent } from './career/career.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServicesComponent } from './services/services.component';
 import { UserCasesComponent } from './user-cases/user-cases.component';
+import { WatermarkComponent } from './watermark/watermark.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UserCasesComponent } from './user-cases/user-cases.component';
     CareerComponent,
     ContactUsComponent,
     ServicesComponent,
-    UserCasesComponent
+    UserCasesComponent,
+    WatermarkComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -51,6 +53,7 @@ import { UserCasesComponent } from './user-cases/user-cases.component';
       { path: 'user-cases', component: UserCasesComponent },
       { path: 'career', component: CareerComponent },
       { path: 'contact-us', component: ContactUsComponent },
+      { path: 'watermark-document', component: WatermarkComponent },
     ])
   ],
   providers: [

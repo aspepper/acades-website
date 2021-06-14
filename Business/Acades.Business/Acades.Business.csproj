@@ -7,4 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Models\Acades.Entities\Acades.Entities.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="7.1.15" />
+  </ItemGroup>
 </Project>

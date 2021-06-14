@@ -1,31 +1,29 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{40B2D5B3-10CF-4E25-A51A-8F24785005BE}|acades.website">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1CDCC566-39F8-454A-B11F-8F360EA094B6}|acades.api">
   <MonoDevelop.Ide.ItemProperties.Acades.Website PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Acades.Entities/RepositoryContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Acades.Website/ClientApp/src/app/watermark/watermark.component.ts">
     <Files>
-      <File FileName="Models/Acades.Entities/RepositoryContext.cs" Line="24" Column="47" />
+      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.html" Line="6" Column="95" />
+      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.ts" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Acades" expanded="True">
-            <Node name="Business" expanded="True">
-              <Node name="Acades.Business" expanded="True" />
-            </Node>
-            <Node name="Models" expanded="True">
-              <Node name="Acades.Entities" expanded="True">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="Models" expanded="True" />
-                <Node name="RepositoryContext.cs" selected="True" />
-              </Node>
-            </Node>
+          <Node name="acades" expanded="True">
             <Node name="Services" expanded="True">
               <Node name="Acades.API" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="PackageDependencies" expanded="True" />
-                </Node>
                 <Node name="Controllers" expanded="True" />
-                <Node name="appsettings.json" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Acades.Website" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="watermark" expanded="True">
+                      <Node name="watermark.component.ts" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -36,6 +34,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Services.Acades.API PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Laboratory.WatermarkSamples.StampWatermakService PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

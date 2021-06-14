@@ -30,6 +30,7 @@ namespace Acades.API
 
             //services.AddScoped<BaseBusiness>();
             //services.AddScoped<CarrerBusiness>();
+            services.AddScoped<StampWatermarkTextBusiness>();
 
             services.AddControllers();
             //services.AddSingleton<IPlaceInfoService, PlaceInfoService>();
