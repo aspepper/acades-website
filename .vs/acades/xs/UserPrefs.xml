@@ -3,8 +3,10 @@
   <MonoDevelop.Ide.ItemProperties.acades.website PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Acades.Website/ClientApp/src/app/watermark/watermark.component.ts">
     <Files>
-      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.html" Line="6" Column="95" />
-      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.ts" Line="1" Column="1" />
+      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.html" Line="50" Column="80" />
+      <File FileName="Acades.Website/ClientApp/src/app/watermark/watermark.component.ts" Line="70" Column="20" />
+      <File FileName="Acades.Website/ClientApp/src/app/career/career.component.html" Line="1" Column="1" />
+      <File FileName="Acades.Website/ClientApp/src/app/career/career.component.ts" Line="37" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +21,10 @@
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
                   <Node name="app" expanded="True">
-                    <Node name="watermark" expanded="True">
-                      <Node name="watermark.component.ts" selected="True" />
+                    <Node name="career" expanded="True">
+                      <Node name="career.component.html" selected="True" />
                     </Node>
+                    <Node name="watermark" expanded="True" />
                   </Node>
                 </Node>
               </Node>

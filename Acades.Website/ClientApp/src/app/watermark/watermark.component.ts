@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { WatermarkService } from '../shared/services/watermark.service';
+import { Component, NgModule, OnInit, AfterViewInit } from '@angular/core';
+import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NgxMaskModule } from 'ngx-mask';
+import * as $ from 'jquery';
+import 'bootstrap';
+  import { WatermarkService } from '../shared/services/watermark.service';
 
 @Component({
   selector: 'app-watermark',
@@ -14,6 +19,7 @@ export class WatermarkComponent implements OnInit {
   public text2: FormControl;
   public text3: FormControl;
   public fileName: FormControl;
+  public formSubmitted = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -58,44 +64,12 @@ export class WatermarkComponent implements OnInit {
   }
 
   public download(event): void {
-    event.preventDefault();
-    this.formSubmitted = true;
-
-    let user = new User();
-    user.email = this.email.value;
-    user.password = this.password.value;
-
-    console.log(user);
-
-    if (person.users == null) { person.users = new Array<User>(); }
-    person.users.push(user);
-
-    console.log("person :: ");
-    console.log(person);
-
-    this.service
-      .SaveCareer(person)
-      .subscribe(personId => {
-
-        if (this.resume != null) {
-          this.resume.personId = personId;
-
-          this.uploadService
-            .uploadResume(this.resume)
-            .subscribe(id => {
-
-              console.log(this.resume);
-
-            });
-        }
-
-        alert("Cadastro realizado com sucesso.");
-        this.clearForm();
-      }, (err) => {
-        console.log(err);
-        alert("Ocorreu um erro no cadastro. Tente mais tarde.");
+    this.watermarkService.upload(this.formWatermark)
+      .subscribe(file => {
+              
+      }, error => {
+          console.log(error);
       });
-
   }
 
 }
