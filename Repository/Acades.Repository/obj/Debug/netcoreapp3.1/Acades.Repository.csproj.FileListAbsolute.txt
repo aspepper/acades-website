@@ -45,7 +45,7 @@ D:/Projetos/acades-website/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Debug/netcoreapp3.1/Acades.Contracts.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/Acades.Repository.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/Acades.Repository.csproj.AssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/Acades.Repository.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/Acades.Repository.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Debug/netcoreapp3.1/Acades.Repository.csproj.CoreCompileInputs.cache

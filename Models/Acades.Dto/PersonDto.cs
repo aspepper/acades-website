@@ -24,11 +24,11 @@ namespace Acades.Dto
 
         public int UpdateUser { get; set; }
 
-        public IList<UserDto> Users { get; set; }
+        public IList<UserDto> Users { get; set; } = new List<UserDto>();
 
-        public IList<PersonRoleDto> Roles { get; set; }
+        public IList<PersonRoleDto> Roles { get; set; } = new List<PersonRoleDto>();
 
-        public IList<FileDto> Files { get; set; }
+        public IList<FileDto> Files { get; set; } = new List<FileDto>();
 
     }
 }

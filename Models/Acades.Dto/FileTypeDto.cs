@@ -19,7 +19,7 @@ namespace Acades.Dto
 
         public int UpdateUser { get; set; }
 
-        public IList<FileDto> Files { get; set; }
+        public IList<FileDto> Files { get; set; } = new List<FileDto>();
 
     }
 }

@@ -19,7 +19,7 @@
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/bin/Debug/netcoreapp3.1/Acades.Entities.dll
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/Debug/netcoreapp3.1/Acades.Business.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/Debug/netcoreapp3.1/Acades.Business.csproj.AssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/Debug/netcoreapp3.1/Acades.Business.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/Debug/netcoreapp3.1/Acades.Business.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Business/Acades.Business/obj/Debug/netcoreapp3.1/Acades.Business.csproj.CoreCompileInputs.cache

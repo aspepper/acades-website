@@ -28,7 +28,6 @@
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Release/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Release/netcoreapp3.1/Acades.Contracts.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/bin/Release/netcoreapp3.1/Acades.Dto.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.csprojAssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.csproj.CoreCompileInputs.cache
@@ -36,3 +35,4 @@
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.dll
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.genruntimeconfig.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Repository/Acades.Repository/obj/Release/netcoreapp3.1/Acades.Repository.csproj.AssemblyReference.cache

@@ -7440,8 +7440,7 @@
     ]
   },
   "packageFolders": {
-    "/Users/alexsandro.pimenta/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/alexsandro.pimenta/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7452,9 +7451,6 @@
       "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
       "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Laboratory/WatermarkSample/StampWatermakService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
       ],

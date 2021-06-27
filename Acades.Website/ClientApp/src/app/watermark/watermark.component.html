@@ -1,3 +1,9 @@
+
+<div *ngIf="processing" class="spinner-grow text-primary spinner"
+     id="spinner" role="status">
+    <span class="sr-only">Processando...</span>
+</div>
+
 <div class="row mt-3 mb-3">
     <div class="col-1"></div>
     <div class="col-10">
@@ -26,9 +32,9 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/images/carrer_banner.jpg" class="img-responsive img-fluid shadow" />
+                        <img src="assets/images/ProtecaoDadosPDF.png" class="img-responsive img-fluid shadow" />
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="txt-color-tm-white txt-shadow pb-5" style="font-size: 2vw;"><strong>Se você tem espírito empreendedor, tem tudo para crescer conosco...<br /><br /><br /><br /><br /><br /><br /></strong></p>
+                            <p class="txt-color-tm-white txt-shadow pb-5" style="font-size: 2vw;"><strong>Proteja os teus documntos PF de distribuíção indevida.<br /><br /><br /><br /><br /><br /><br /></strong></p>
                         </div>
                     </div>
                 </div>
@@ -46,127 +52,133 @@
     <div class="col-1"></div>
 
     <div class="col-10">
-        <div class="d-flex justify-content-center align-items-center ">
-            <form class="form" [formGroup]="formWatermark" (ngSubmit)="download($event)">
+        <form class="form" [formGroup]="formWatermark" (ngSubmit)="proceed($event)">
 
-                <div class="card p-3 card-form">
+            <div class="d-flex card card-form ">
 
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Nome do Arquivo</label>
-                        <input type="text" id="name"
-                               class="form form-control input-name"
-                               formControlName="name"
-                               placeholder="Entre o nome completo"
-                               [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
+                <div class="form-group col-md-8 mt-5">
+                    <p>Como preencher este formulário?</p>
+                    <p>Preencha os dados obrigatórios preenchendo seu: nome completo e e-mail.</p>
+                    <p>Digite o Texto 1. Este será o primeiro texto que aparecerá como marca d'água, e é obirgatório.</p>
+                    <p>Opcionalmente, digite os Textos 2 e 3. A senha também é opcional e será usada para proteger o documento PDF com esta senha</p>
+                    <p>selecione o arquivo PDF deejado, que está armazenado na sua máquina, e clique em Enviar para o arquivo ser processado.</p>
+                    <p>Aguarde o processamento. Assim que o processo finalizar, o novo documento processado será baixado automaticamente para você.</p>
+                </div>
+
+                <div class="form-group col-md-8 mt-5">
+                    <label for="name" class="sr-only">Nome completo</label>
+                    <input type="text" id="name"
+                           class="form form-control input-name"
+                           formControlName="name"
+                           placeholder="Entre o nome completo"
+                           [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
                                              'is-valid': name.valid && (name.dirty || name.touched),
                                        'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
-                            <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="text"
-                               id="email"
-                               class="form form-control input-email"
-                               formControlName="email"
-                               placeholder="Entre o seu e-mail"
-                               [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
-                                             'is-valid': email.valid && (email.dirty || email.touched),
-                                       'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
-                            <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="text1" class="sr-only">Texto 1</label>
-                        <input type="text"
-                               id="text1"
-                               class="form form-control input-document"
-                               formControlName="text1"
-                               placeholder="Entre o texto"
-                               [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
-                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
-                                       'form-submitted': formSubmitted}">
-
-                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
-                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="text1" class="sr-only">Texto 1</label>
-                        <input type="text"
-                               id="text1"
-                               class="form form-control input-document"
-                               formControlName="text1"
-                               placeholder="Entre o texto"
-                               [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
-                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
-                                       'form-submitted': formSubmitted}">
-
-                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
-                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>            
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="text2" class="sr-only">Texto 2</label>
-                        <input type="text"
-                               id="text2"
-                               class="form form-control input-document"
-                               formControlName="text2"
-                               placeholder="Entre o texto"
-                               [ngClass]="{'is-invalid': text2.invalid && (text2.dirty || text2.touched),
-                                             'is-valid': text2.valid && (text2.dirty || text2.touched),
-                                       'form-submitted': formSubmitted}">
-
-                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
-                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="text3" class="sr-only">Texto 3</label>
-                        <input type="text"
-                               id="text3"
-                               class="form form-control input-document"
-                               formControlName="text3"
-                               placeholder="Entre o texto"
-                               [ngClass]="{'is-invalid': text3.invalid && (text3.dirty || text3.touched),
-                                             'is-valid': text3.valid && (text3.dirty || text3.touched),
-                                       'form-submitted': formSubmitted}">
-
-                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
-                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="button" (click)="fileInput.click()">Selecione o arquivo PDF</button>
-                        <input hidden
-                               #fileInput
-                               type="file"
-                               formControlName="FileName"
-                               id="file"
-                               (change)="setFilename(fileInput.files)" />
-                        <label>{{ FileName.value }}</label>
-                    </div>
-
-                    <div class="form-group">
-                        <button class="btn btn-success float-right mr-2" (click)="clearForm()">Limpar</button>
-                        <button class="btn btn-success float-right mr-4" [disabled]="!formCareer.valid" type="submit">Enviar</button>
+                    <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+                        <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
                     </div>
                 </div>
 
-            </form>
+                <div class="form-group col-md-8">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="text"
+                           id="email"
+                           class="form form-control input-email"
+                           formControlName="email"
+                           placeholder="Entre o seu e-mail"
+                           [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
+                                             'is-valid': email.valid && (email.dirty || email.touched),
+                                       'form-submitted': formSubmitted}">
+                    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+                        <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
+                    </div>
+                </div>
 
-        </div>
+                <div class="form-group col-md-10">
+                    <label for="text1" class="sr-only">Texto 1</label>
+                    <input type="text"
+                           id="text1"
+                           class="form form-control input-document"
+                           formControlName="text1"
+                           placeholder="Entre o texto"
+                           [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
+                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
+                                       'form-submitted': formSubmitted}">
+
+                    <div class="form-control-feedback" *ngIf="text1.errors && (text1.dirty || text1.touched)">
+                        <p *ngIf="text1.errors.required">O Texto 1 é obrigatório</p>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-10">
+                    <label for="text2" class="sr-only">Texto 2</label>
+                    <input type="text"
+                           id="text2"
+                           class="form form-control input-document"
+                           formControlName="text2"
+                           placeholder="Entre o texto">
+                </div>
+
+                <div class="form-group col-md-10">
+                    <label for="text3" class="sr-only">Texto 3</label>
+                    <input type="text"
+                           id="text3"
+                           class="form form-control input-document"
+                           formControlName="text3"
+                           placeholder="Entre o texto">
+                </div>
+
+                <div class="form-group col-md-5">
+                    <label for="password" class="sr-only">Senha</label>
+                    <input type="password"
+                           id="password"
+                           class="form form-control input-document"
+                           formControlName="password"
+                           placeholder="Entre a senha de proteção">
+                </div>
+
+                <div class="form-group col-md-10">
+                    <button type="button" (click)="fileInput.click()">Selecione o arquivo PDF</button>
+                    <input hidden
+                           #fileInput
+                           type="file"
+                           formControlName="file"
+                           id="file"
+                           (change)="uploadDocument(fileInput.files)"
+                           accept=".pdf" /><br />
+                    <label>{{ fileName }}</label>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-success float-right mr-4" [disabled]="!formWatermark.valid || processing" type="submit">Enviar</button>
+                </div>
+            </div>
+
+        </form>
+
     </div>
 
     <div class="col-1"></div>
 </div>
 
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <small class="text-muted">
+            Este é uma área de testes para que você tenho uma ideia de como funciona nosso serviço de proteção dos seus PDF`s.
+        </small>
+        <small class="text-muted">
+            Os campos obrigatórios para o teste são apenas o nome completo, o e-mail, o texto 1 e o arquivo PDF.
+        </small>
+        <small class="text-muted">
+            Os textos que você informar, sempre serão mostrados nas mesmas posições no documento. As cores sempre serão Azul para o Texto 1,
+            Verde para o Texto 2 e Vermelho para o Texto 3, e a fonte sempre será Helvetica-Bold, com tamanho 20 pontos, opacidade de 50%,
+            e direção diagonal da esquerda para a direita.
+        </small>
+        <small class="text-muted">
+            O serviço será disponibilizado de forma que o cliente poderá informar todos esses dados, de acordo com suas necessidades.
+        </small>
+    </div>
+    <div class="col-1"></div>
 
+</div>

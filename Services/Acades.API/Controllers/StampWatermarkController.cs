@@ -1,4 +1,5 @@
-using System.Diagnostics;
+using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Acades.Business;
 using Acades.Dto;
@@ -7,6 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Acades.API.Controllers
 {
@@ -17,32 +20,58 @@ namespace Acades.API.Controllers
     {
 
         protected StampWatermarkTextBusiness buzz;
+        private readonly ILogger<StampWatermarkController> logger;
 
-        public StampWatermarkController(RepositoryContext context, IConfiguration conf)
+        public StampWatermarkController(RepositoryContext context, ILogger<StampWatermarkController> logger, IConfiguration conf)
         {
             buzz = new StampWatermarkTextBusiness(context, conf);
+            this.logger = logger;
         }
 
-        [HttpPost("StampTextsToPDF")]
-        [AllowAnonymous]
+        [HttpPost]
+        [Route("StampTextsToPDF")]
+        [Authorize(Roles = "ADMINISTRATOR,PDFPROTSERVICEUSER")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> StampTextsToPDF([FromBody] StampSimpleDto stampSimple, [FromServices] StampWatermarkTextBusiness stampWatermarkTextBusiness)
         {
-            Debug.WriteLine(stampSimple);
-            var newPDF = await stampWatermarkTextBusiness.ManipulatePdf(stampSimple);
-            return File(newPDF, "application/pdf", stampSimple.FileName);
+            try
+            {
+                logger.LogInformation(JsonConvert.SerializeObject(stampSimple));
+                var userdata = (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.UserData).Value);
+                stampSimple.UserId = int.Parse(userdata);
+                var newPDF = await stampWatermarkTextBusiness.ManipulatePdf(stampSimple);
+                return File(newPDF, "application/pdf", stampSimple.FileName);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
 
-        [HttpPost("StampTextsToPDFFromLoad")]
-        [AllowAnonymous]
+        [HttpPost]
+        [Route("StampTextsToPDFFromLoad")]
+        [Authorize(Roles = "ADMINISTRATOR,PDFPROTSERVICEUSER")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> StampTextsToPDFFromLoad([FromBody] StampSimpleDto stampSimple, [FromServices] StampWatermarkTextBusiness stampWatermarkTextBusiness)
         {
-            Debug.WriteLine(stampSimple);
-            var newPDF = await stampWatermarkTextBusiness.ManipulatePdfFromURL(stampSimple);
-            return File(newPDF, "application/pdf", stampSimple.FileName);
+            try
+            {
+                logger.LogInformation(JsonConvert.SerializeObject(stampSimple));
+                var userdata = (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.UserData).Value);
+                stampSimple.UserId = int.Parse(userdata);
+                var newPDF = await stampWatermarkTextBusiness.ManipulatePdfFromURL(stampSimple);
+                return File(newPDF, "application/pdf", stampSimple.FileName);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
 
     }

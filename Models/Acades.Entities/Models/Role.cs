@@ -1,4 +1,4 @@
-﻿using System;
+﻿                using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -13,7 +13,15 @@ namespace Acades.Entities.Models
 
         public string Description { get; set; }
 
+        public string NormalizedName { get; set; }
+
+        public string Area { get; set; }
+
+        public bool IsVisible { get; set; }
+
         public bool IsDeleted { get; set; }
+
+        public bool IsAdm { get; set; }
 
         public DateTime InsertDate { get; set; }
 
@@ -25,33 +33,35 @@ namespace Acades.Entities.Models
 
         public ICollection<PersonRole> Persons { get; set; }
 
-        public static Expression<Func<Role, RoleDto>> ToDto()
+        public static Expression<Func<Role, RoleDto>> ToDto() => (c) => new RoleDto
         {
-            return (c) => new RoleDto
-            {
-                Id = c.Id,
-                Description = c.Description,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser,
-                Persons = c.Persons != null ? c.Persons.Select(e => PersonRole.ToDto(e)).ToList() : null
-            };
-        }
-        public static RoleDto ToDto(Role c)
+            Id = c.Id,
+            Description = c.Description,
+            NormalizedName = c.NormalizedName,
+            Area = c.Area,
+            IsVisible = c.IsVisible,
+            IsAdm = c.IsAdm,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser,
+            Persons = c.Persons == null ? null : c.Persons.Where(p => !p.IsDeleted).Select(e => PersonRole.ToDto(e)).ToList()
+        };
+
+        public static RoleDto ToDto(Role c) => new()
         {
-            return new RoleDto
-            {
-                Id = c.Id,
-                Description = c.Description,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser,
-                Persons = c.Persons?.Select(e => PersonRole.ToDto(e)).ToList()
-            };
-        }
-    }
-}
+            Id = c.Id,
+            Description = c.Description,
+            NormalizedName = c.NormalizedName,
+            Area = c.Area,
+            IsVisible = c.IsVisible,
+            IsAdm = c.IsAdm,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
+    }   
+}   

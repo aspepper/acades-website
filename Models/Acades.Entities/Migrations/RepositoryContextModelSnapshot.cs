@@ -15,7 +15,7 @@ namespace Acades.Entities.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .HasAnnotation("ProductVersion", "3.1.16")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -41,7 +41,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 656, DateTimeKind.Local).AddTicks(7920));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 141, DateTimeKind.Local).AddTicks(8020));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace Acades.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
@@ -62,7 +62,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 657, DateTimeKind.Local).AddTicks(4430));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 142, DateTimeKind.Local).AddTicks(4690));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -91,7 +91,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 661, DateTimeKind.Local).AddTicks(5960));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 146, DateTimeKind.Local).AddTicks(3910));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -101,12 +101,12 @@ namespace Acades.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasDefaultValue(false);
 
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 662, DateTimeKind.Local).AddTicks(2410));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 147, DateTimeKind.Local).AddTicks(1370));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -116,6 +116,80 @@ namespace Acades.Entities.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FileType");
+                });
+
+            modelBuilder.Entity("Acades.Entities.Models.PdfServiceRegister", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Error")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("FilePdfUrl")
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<DateTime>("GeneratedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 154, DateTimeKind.Local).AddTicks(5990));
+
+                    b.Property<DateTime>("InsertDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 156, DateTimeKind.Local).AddTicks(5240));
+
+                    b.Property<int>("InsertUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("OwnerDocument")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("OwnerEmail")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("OwnerName")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<bool>("PrintCustomerData")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime>("UpdateDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 157, DateTimeKind.Local).AddTicks(3410));
+
+                    b.Property<int>("UpdateUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PdfServiceRegister");
                 });
 
             modelBuilder.Entity("Acades.Entities.Models.Person", b =>
@@ -136,7 +210,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 592, DateTimeKind.Local).AddTicks(3840));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 33, DateTimeKind.Local).AddTicks(8520));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -146,7 +220,7 @@ namespace Acades.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -156,7 +230,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 627, DateTimeKind.Local).AddTicks(4020));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 95, DateTimeKind.Local).AddTicks(3860));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -178,7 +252,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 647, DateTimeKind.Local).AddTicks(3330));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 132, DateTimeKind.Local).AddTicks(8980));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -188,7 +262,7 @@ namespace Acades.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasDefaultValue(false);
 
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
@@ -199,7 +273,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 647, DateTimeKind.Local).AddTicks(8940));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 133, DateTimeKind.Local).AddTicks(6140));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -222,28 +296,50 @@ namespace Acades.Entities.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Area")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 640, DateTimeKind.Local).AddTicks(1950));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 115, DateTimeKind.Local).AddTicks(5060));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(1);
 
+                    b.Property<bool>("IsAdm")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsVisible")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
 
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 640, DateTimeKind.Local).AddTicks(8080));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 116, DateTimeKind.Local).AddTicks(3670));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -251,6 +347,9 @@ namespace Acades.Entities.Migrations
                         .HasDefaultValue(1);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique();
 
                     b.ToTable("Role");
                 });
@@ -268,7 +367,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 635, DateTimeKind.Local).AddTicks(7030));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 108, DateTimeKind.Local).AddTicks(950));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -278,7 +377,7 @@ namespace Acades.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true);
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
@@ -289,12 +388,17 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 11, 8, 10, 4, 0, 636, DateTimeKind.Local).AddTicks(4290));
+                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 108, DateTimeKind.Local).AddTicks(8300));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(1);
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.HasKey("Id");
 

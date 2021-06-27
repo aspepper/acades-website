@@ -31,7 +31,7 @@ D:/Projetos/acades-website/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Ac
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/bin/Debug/netcoreapp3.1/Acades.Entities.dll
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Acades.Contracts.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Acades.Contracts.csproj.AssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Acades.Contracts.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Acades.Contracts.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/Debug/netcoreapp3.1/Acades.Contracts.csproj.CoreCompileInputs.cache

@@ -13,9 +13,6 @@
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
         "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Contracts/Acades.Contracts/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
         ],
@@ -72,9 +69,6 @@
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
         "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
         ],
@@ -100,6 +94,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "itext7": {
               "target": "Package",
               "version": "[7.1.15, )"
@@ -133,9 +131,6 @@
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
         "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
         ],
@@ -167,23 +162,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.16, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.16, )"
             }
           },
           "imports": [
@@ -214,9 +209,6 @@
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
         "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
         ],

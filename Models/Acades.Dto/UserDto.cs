@@ -8,6 +8,8 @@ namespace Acades.Dto
 
         public PersonDto Person { get; set; }
 
+        public string UserName { get; set; }
+
         public string Email { get; set; }
 
         public int PersonId { get; set; }

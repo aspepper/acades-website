@@ -11,6 +11,8 @@ namespace Acades.Entities.Models
 
         public Person Person { get; set; }
 
+        public string UserName { get; set; }
+
         public string Email { get; set; }
 
         public int PersonId { get; set; }
@@ -27,39 +29,35 @@ namespace Acades.Entities.Models
 
         public int UpdateUser { get; set; }
 
-        public static Expression<Func<User, UserDto>> ToDto()
+        public static Expression<Func<User, UserDto>> ToDto() => (c) => new UserDto
         {
-            return (c) => new UserDto
-            {
-                Id = c.Id,
-                Person = Person.ToDto(c.Person),
-                Email = c.Email,
-                PersonId = c.PersonId,
-                Password = c.Password,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser,
-            };
-        }
+            Id = c.Id,
+            Person = c.Person == null ? null : Person.ToDto(c.Person),
+            UserName = c.UserName,
+            Email = c.Email,
+            PersonId = c.PersonId,
+            Password = c.Password,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser,
+        };
 
-        public static UserDto ToDto(User c)
+        public static UserDto ToDto(User c) => new()
         {
-            return new UserDto
-            {
-                Id = c.Id,
-                Person = Person.ToDto(c.Person),
-                Email = c.Email,
-                PersonId = c.PersonId,
-                Password = c.Password,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser
-            };
-        }
+            Id = c.Id,
+            Person = c.Person == null ? null : Person.ToDto(c.Person),
+            UserName = c.UserName,
+            Email = c.Email,
+            PersonId = c.PersonId,
+            Password = c.Password,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
 
     }
 }

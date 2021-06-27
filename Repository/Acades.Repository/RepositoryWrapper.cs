@@ -1,5 +1,4 @@
-﻿using System;
-using Acades.Contracts;
+﻿using Acades.Contracts;
 using Acades.Entities;
 
 namespace Acades.Repository

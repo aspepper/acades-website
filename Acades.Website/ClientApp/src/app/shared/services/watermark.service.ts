@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { File, FileUploaded } from '../models/file';
 
 @Injectable({
@@ -12,8 +13,16 @@ export class WatermarkService {
 
   constructor(private http: HttpClient) { }
 
-  public upload(formData: FormData): Observable<[]> {
-    return this.http.post<[]>(`${this.BaseURL}/StampTextsToPDF`, formData);
+  public toStamp(formData: FormData): Observable<any> {
+    console.log(formData);
+    return this.http.post<any>(`${this.BaseURL}/StampTextsToPDF`, formData)
+      .pipe(
+        catchError((err) => {
+          console.log('error caught in service')
+          console.error(err);
+          throw new Error(err);
+        })
+      );
   }
 
 }

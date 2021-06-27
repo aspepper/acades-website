@@ -28,16 +28,17 @@ namespace Acades.Website
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
 
+
             services.AddDbContext<RepositoryContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("AcadesDatabase"),
-                    b => b.MigrationsAssembly(typeof(RepositoryContext).Assembly.FullName)));
+                    Configuration.GetConnectionString("AcadesDatabase")));
 
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
 
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddScoped(x => new BlobServiceClient(Configuration.GetValue<string>("AzureBlobStorage")));
             services.AddScoped<IBlobService, BlobService>();
             services.AddScoped<StampWatermarkTextBusiness>();

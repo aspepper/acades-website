@@ -35,7 +35,7 @@ D:/Projetos/acades-website/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Dto.dll
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.csproj.AssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Entities/obj/Debug/netcoreapp3.1/Acades.Entities.csproj.CoreCompileInputs.cache

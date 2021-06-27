@@ -37,7 +37,7 @@ D:/Projetos/acades-website/Services/LoggerService/obj/Debug/netcoreapp3.1/Logger
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/bin/Debug/netcoreapp3.1/Acades.Contracts.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/bin/Debug/netcoreapp3.1/Acades.Dto.pdb
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/bin/Debug/netcoreapp3.1/Acades.Entities.pdb
-/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/Debug/netcoreapp3.1/LoggerService.csprojAssemblyReference.cache
+/Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/Debug/netcoreapp3.1/LoggerService.csproj.AssemblyReference.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/Debug/netcoreapp3.1/LoggerService.AssemblyInfoInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/Debug/netcoreapp3.1/LoggerService.AssemblyInfo.cs
 /Users/alexsandro.pimenta/Projects/acades/acades/Services/LoggerService/obj/Debug/netcoreapp3.1/LoggerService.csproj.CoreCompileInputs.cache

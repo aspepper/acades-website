@@ -4,7 +4,7 @@ using Acades.Dto;
 
 namespace Acades.Entities.Models
 {
-    public class PersonRole
+    public class    PersonRole
     {
 
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace Acades.Entities.Models
         public int RoleId { get; set; }
 
         public bool IsDeleted { get; set; }
-
+         
         public DateTime InsertDate { get; set; }
 
         public int InsertUser { get; set; }
@@ -27,39 +27,32 @@ namespace Acades.Entities.Models
 
         public int UpdateUser { get; set; }
 
-        public static Expression<Func<PersonRole, PersonRoleDto>> ToDto()
+        public static Expression<Func<PersonRole, PersonRoleDto>> ToDto() => c => new PersonRoleDto
         {
-            return c => new PersonRoleDto
-            {
-                Id = c.Id,
-                Person = Person.ToDto(c.Person),
-                PersonId = c.Person.Id,
-                Role = Role.ToDto(c.Role),
-                RoleId = c.Role.Id,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser
-            };
-        }
+            Id = c.Id,
+            PersonId = c.Person.Id,
+            Person = c.Person == null ? null : Person.ToDto(c.Person),
+            RoleId = c.Role.Id,
+            Role = c.Role == null ? null : Role.ToDto(c.Role),
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
 
-        public static PersonRoleDto ToDto(PersonRole c)
+        public static PersonRoleDto ToDto(PersonRole c) => new()
         {
-            return new PersonRoleDto
-            {
-                Id = c.Id,
-                Person = Person.ToDto(c.Person),
-                PersonId = c.Person.Id,
-                Role = Role.ToDto(c.Role),
-                RoleId = c.Role.Id,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser
-            };
-        }
-
+            Id = c.Id,
+            PersonId = c.Person.Id,
+            Person = c.Person == null ? null : Person.ToDto(c.Person),
+            RoleId = c.RoleId,
+            Role = c.Role == null ? null : Role.ToDto(c.Role),
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
     }
 }

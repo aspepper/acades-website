@@ -14,3 +14,4 @@
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.csproj.CoreCompileInputs.cache
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.dll
 /Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.pdb
+/Users/alexsandro.pimenta/Projects/acades/acades/Models/Acades.Dto/obj/Release/netcoreapp3.1/Acades.Dto.csproj.AssemblyReference.cache

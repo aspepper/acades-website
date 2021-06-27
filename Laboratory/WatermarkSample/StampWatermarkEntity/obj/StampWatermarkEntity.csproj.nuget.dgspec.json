@@ -13,9 +13,6 @@
         "packagesPath": "/Users/alexsandro.pimenta/.nuget/packages/",
         "outputPath": "/Users/alexsandro.pimenta/Projects/acades/acades/Laboratory/WatermarkSample/StampWatermarkEntity/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/alexsandro.pimenta/.config/NuGet/NuGet.Config"
         ],

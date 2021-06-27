@@ -9,7 +9,15 @@ namespace Acades.Dto
 
         public string Description { get; set; }
 
+        public string NormalizedName { get; set; }
+
+        public string Area { get; set; }
+
+        public bool IsVisible { get; set; }
+
         public bool IsDeleted { get; set; }
+
+        public bool IsAdm { get; set; }
 
         public DateTime InsertDate { get; set; }
 
@@ -19,7 +27,7 @@ namespace Acades.Dto
 
         public int UpdateUser { get; set; }
 
-        public IList<PersonRoleDto> Persons { get; set; }
+        public IList<PersonRoleDto> Persons { get; set; } = new List<PersonRoleDto>();
 
     }
 }

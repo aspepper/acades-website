@@ -35,47 +35,40 @@ namespace Acades.Entities.Models
 
         public int UpdateUser { get; set; }
 
-        public static Expression<Func<File, FileDto>> ToDto()
+        public static Expression<Func<File, FileDto>> ToDto() => (c) => new FileDto
         {
-            return (c) => new FileDto
-            {
-                Id = c.Id,
-                FileTypeId = c.FileTypeId,
-                FileType = FileType.ToDto(c.FileType),
-                FileName = c.FileName,
-                FileNameOriginal = c.FileNameOriginal,
-                FileExtension = c.FileExtension,
-                Path = c.Path,
-                PersonId = c.PersonId,
-                Person = Person.ToDto(c.Person),
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser,
-            };
-        }
+            Id = c.Id,
+            FileTypeId = c.FileTypeId,
+            FileType = c.FileType == null ? null : FileType.ToDto(c.FileType),
+            FileName = c.FileName,
+            FileNameOriginal = c.FileNameOriginal,
+            FileExtension = c.FileExtension,
+            Path = c.Path,
+            PersonId = c.PersonId,
+            Person = c.Person == null ? null : Person.ToDto(c.Person),
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser,
+        };
 
-        public static FileDto ToDto(File c)
+        public static FileDto ToDto(File c) => new()
         {
-            return new FileDto
-            {
-                Id = c.Id,
-                FileTypeId = c.FileTypeId,
-                FileType = FileType.ToDto(c.FileType),
-                FileName = c.FileName,
-                FileNameOriginal = c.FileNameOriginal,
-                FileExtension = c.FileExtension,
-                Path = c.Path,
-                PersonId = c.PersonId,
-                Person = Person.ToDto(c.Person),
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser
-            };
-        }
+            Id = c.Id,
+            FileTypeId = c.FileTypeId,
+            FileType = c.FileType == null ? null : FileType.ToDto(c.FileType),
+            FileName = c.FileName,
+            FileNameOriginal = c.FileNameOriginal,
+            FileExtension = c.FileExtension,
+            Path = c.Path,
+            PersonId = c.PersonId,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
 
 
     }

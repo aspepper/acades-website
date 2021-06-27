@@ -24,35 +24,28 @@ namespace Acades.Entities.Models
 
         public ICollection<File> Files { get; set; }
 
-        public static Expression<Func<FileType, FileTypeDto>> ToDto()
+        public static Expression<Func<FileType, FileTypeDto>> ToDto() => (c) => new FileTypeDto
         {
-            return (c) => new FileTypeDto
-            {
-                Id = c.Id,
-                Description = c.Description,
-                Files = c.Files != null ? c.Files.Select(f => File.ToDto(f)).ToList() : null,
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser,
-            };
-        }
+            Id = c.Id,
+            Description = c.Description,
+            Files = c.Files == null ? null : c.Files.Where(p => !p.IsDeleted).Select(f => File.ToDto(f)).ToList(),
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser,
+        };
 
-        public static FileTypeDto ToDto(FileType c)
+        public static FileTypeDto ToDto(FileType c) => new()
         {
-            return new FileTypeDto
-            {
-                Id = c.Id,
-                Description = c.Description,
-                Files = c.Files?.Select(f => File.ToDto(f)).ToList(),
-                IsDeleted = c.IsDeleted,
-                InsertDate = c.InsertDate,
-                InsertUser = c.InsertUser,
-                UpdateDate = c.UpdateDate,
-                UpdateUser = c.UpdateUser
-            };
-        }
+            Id = c.Id,
+            Description = c.Description,
+            IsDeleted = c.IsDeleted,
+            InsertDate = c.InsertDate,
+            InsertUser = c.InsertUser,
+            UpdateDate = c.UpdateDate,
+            UpdateUser = c.UpdateUser
+        };
 
     }
 }
