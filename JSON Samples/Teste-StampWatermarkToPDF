@@ -1,0 +1,43 @@
+{
+   "FileName":"Boletim_401_1859_103213_173.pdf",
+   "Name":"Alex Pimenta",
+   "Email":"aspepper@gmail.com",
+   "Password":"abc123",
+   "Document":"12139836812",
+   "PrintCustomerData":true,
+   "PdfURL":null,
+   "PdfFile":null,
+   "Texts":[
+      {
+         "Text":"Todos os direitos reservados",
+         "FontName":"Helvetica-Bold",
+         "FontSize":20.0,
+         "Color":"Cyan",
+         "PosX":600.0,
+         "PosY":700.0,
+         "Radio":5.6,
+         "Opacity":0.5
+      },
+      {
+         "Text":"Todos os direitos reservados",
+         "FontName":"Helvetica-Bold",
+         "FontSize":20.0,
+         "Color":"Red",
+         "PosX":400.0,
+         "PosY":500.0,
+         "Radio":5.6,
+         "Opacity":0.5
+      },
+      {
+         "Text":"Todos os direitos reservados",
+         "FontName":"Helvetica-Bold",
+         "FontSize":20.0,
+         "Color":"Green",
+         "PosX":200.0,
+         "PosY":200.0,
+         "Radio":5.6,
+         "Opacity":0.5
+      }
+   ],
+   "UserId":1
+}
