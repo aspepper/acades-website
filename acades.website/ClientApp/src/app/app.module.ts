@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from "ngx-mask";
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
@@ -44,6 +46,7 @@ import { WatermarkComponent } from './watermark/watermark.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    AngularFontAwesomeModule,
     NgSelectModule,
     NgxMaskModule.forRoot(),
     RouterModule.forRoot([

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import * as $ from 'jquery';
 import 'bootstrap';
+
 import { WatermarkService } from '../shared/services/watermark.service';
 import { UploadService } from '../shared/services/upload.services';
 
