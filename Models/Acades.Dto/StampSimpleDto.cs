@@ -26,5 +26,7 @@ namespace Acades.Dto
 
         public int UserId { get; set; }
 
+        public string IPSource { get; set;  }
+
     }
 }

@@ -127,7 +127,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
       this.filename = files[0].name;
     }
     this.save(files);
-  }
+  } 
 
   public save(files): void {
     const formData = new FormData();

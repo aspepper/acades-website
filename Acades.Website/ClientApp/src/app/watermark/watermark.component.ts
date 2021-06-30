@@ -1,19 +1,20 @@
 import { Component, NgModule, OnInit, AfterViewInit } from '@angular/core';
-import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators, PatternValidator, FormArray, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import * as $ from 'jquery';
 import 'bootstrap';
-
+import { FormBaseComponent } from '../form-base.component'
 import { WatermarkService } from '../shared/services/watermark.service';
 import { UploadService } from '../shared/services/upload.services';
+import { CustomValidators } from '../shared/components/validators/custom-validators';
 
 @Component({
   selector: 'app-watermark',
   templateUrl: './watermark.component.html',
   styleUrls: ['./watermark.component.css']
 })
-export class WatermarkComponent implements OnInit {
+export class WatermarkComponent extends FormBaseComponent implements OnInit {
 
   public formWatermark: FormGroup;
   public name: FormControl;
@@ -27,17 +28,18 @@ export class WatermarkComponent implements OnInit {
   public processing: Boolean = false;
 
   public fileName: string = "";
+  public hide: boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private watermarkService: WatermarkService
   ) {
-
-    this.createForm();
+    super();
   }
 
   ngOnInit() {
+    this.createForm();
   }
 
   public createFormControls(): void {
@@ -61,7 +63,7 @@ export class WatermarkComponent implements OnInit {
       Validators.required
     ])
   }
-
+  
   public createForm(): void {
 
     this.createFormControls();
@@ -76,23 +78,19 @@ export class WatermarkComponent implements OnInit {
       file: this.file
     });
   }
-
-  public uploadDocument(files: any): void {
-    if (files && files[0]) {
-      console.log(files[0].name);
-      this.fileName = files[0].name;
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.formWatermark.get('file').setValue(files[0]);
-      };
-      reader.readAsDataURL(files[0]);
-    }
-  }
-
+    
   public proceed(event): void {
     this.processing = true;
 
     const formData = new FormData();
+
+    console.log(this.file);
+
+    const FileInput = this.formWatermark.get('file').value;
+
+    console.log(FileInput.files[0]);
+
+    this.fileName = FileInput.files[0].name;
 
     formData.append('Name', this.name.value);
     formData.append('Email', this.email.value);
@@ -101,11 +99,11 @@ export class WatermarkComponent implements OnInit {
     formData.append('Text3', this.text3.value);
     formData.append('Password', this.password.value);
     formData.append('FileName', this.file.value.name);
-    formData.append("File", this.file.value);
+    formData.append("File", FileInput.files[0]);
 
     this.watermarkService.toStamp(formData)
       .subscribe(file => {
-        console.log(file);
+        console.log(file);  
         const source = `data:application/pdf;base64,${file}`;
         const link = document.createElement("a");
         link.href = source;
@@ -117,7 +115,6 @@ export class WatermarkComponent implements OnInit {
         console.log(error);
         this.processing = false;
       });
-
 
   }
 

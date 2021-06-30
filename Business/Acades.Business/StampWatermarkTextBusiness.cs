@@ -67,7 +67,7 @@ namespace Acades.Business
         {
 
             var PdfSvc = new Entities.Models.PdfServiceRegister
-            {   
+            {
                 UserId = fileSource.UserId,
                 FileName = fileSource.FileName,
                 FilePdfUrl = fileSource.PdfURL,
@@ -75,6 +75,7 @@ namespace Acades.Business
                 OwnerEmail = fileSource.Email,
                 OwnerDocument = fileSource.Document,
                 PrintCustomerData = fileSource.PrintCustomerData,
+                IPSource = fileSource.IPSource,
                 GeneratedDate=DateTime.Now,
                 InsertDate = DateTime.Now,
                 InsertUser = fileSource.UserId,

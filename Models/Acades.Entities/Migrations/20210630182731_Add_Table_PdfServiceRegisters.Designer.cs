@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Acades.Entities.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20210626022600_Add_Table_PdfServiceRegisters")]
+    [Migration("20210630182731_Add_Table_PdfServiceRegisters")]
     partial class Add_Table_PdfServiceRegisters
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 141, DateTimeKind.Local).AddTicks(8020));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 279, DateTimeKind.Local).AddTicks(8750));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -64,7 +64,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 142, DateTimeKind.Local).AddTicks(4690));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 280, DateTimeKind.Local).AddTicks(6300));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -93,7 +93,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 146, DateTimeKind.Local).AddTicks(3910));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 287, DateTimeKind.Local).AddTicks(7850));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -108,7 +108,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 147, DateTimeKind.Local).AddTicks(1370));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 291, DateTimeKind.Local).AddTicks(4290));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -142,12 +142,16 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("GeneratedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 154, DateTimeKind.Local).AddTicks(5990));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 299, DateTimeKind.Local).AddTicks(1030));
+
+                    b.Property<string>("IPSource")
+                        .HasColumnType("nvarchar(15)")
+                        .HasMaxLength(15);
 
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 156, DateTimeKind.Local).AddTicks(5240));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 301, DateTimeKind.Local).AddTicks(9650));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -179,7 +183,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 157, DateTimeKind.Local).AddTicks(3410));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 302, DateTimeKind.Local).AddTicks(6070));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -212,7 +216,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 33, DateTimeKind.Local).AddTicks(8520));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 168, DateTimeKind.Local).AddTicks(8550));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -232,7 +236,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 95, DateTimeKind.Local).AddTicks(3860));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 230, DateTimeKind.Local).AddTicks(2490));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -254,7 +258,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 132, DateTimeKind.Local).AddTicks(8980));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 268, DateTimeKind.Local).AddTicks(5060));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -275,7 +279,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 133, DateTimeKind.Local).AddTicks(6140));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 269, DateTimeKind.Local).AddTicks(5260));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -311,7 +315,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 115, DateTimeKind.Local).AddTicks(5060));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 251, DateTimeKind.Local).AddTicks(460));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -341,7 +345,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 116, DateTimeKind.Local).AddTicks(3670));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 252, DateTimeKind.Local).AddTicks(60));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()
@@ -369,7 +373,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("InsertDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 108, DateTimeKind.Local).AddTicks(950));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 243, DateTimeKind.Local).AddTicks(8990));
 
                     b.Property<int>("InsertUser")
                         .ValueGeneratedOnAdd()
@@ -390,7 +394,7 @@ namespace Acades.Entities.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 25, 23, 25, 59, 108, DateTimeKind.Local).AddTicks(8300));
+                        .HasDefaultValue(new DateTime(2021, 6, 30, 15, 27, 31, 244, DateTimeKind.Local).AddTicks(6940));
 
                     b.Property<int>("UpdateUser")
                         .ValueGeneratedOnAdd()

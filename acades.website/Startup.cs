@@ -4,7 +4,7 @@ using Acades.Website.Services;
 using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,6 +37,9 @@ namespace Acades.Website
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddControllersWithViews();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddScoped(x => new BlobServiceClient(Configuration.GetValue<string>("AzureBlobStorage")));

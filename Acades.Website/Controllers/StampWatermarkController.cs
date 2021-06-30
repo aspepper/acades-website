@@ -6,6 +6,7 @@ using Acades.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -19,11 +20,13 @@ namespace Acades.Website.Controllers
 
         private readonly ILogger<StampWatermarkController> logger;
         private readonly IConfiguration configuration;
+        private readonly IActionContextAccessor accessor;
 
-        public StampWatermarkController(ILogger<StampWatermarkController> logger, IConfiguration configuration)
+        public StampWatermarkController(ILogger<StampWatermarkController> logger, IConfiguration configuration, IActionContextAccessor accessor)
         {
             this.logger = logger;
             this.configuration = configuration;
+            this.accessor = accessor;
         }
 
         [HttpPost]
@@ -54,6 +57,7 @@ namespace Acades.Website.Controllers
                 stampSimple.FileName = stamp.File.FileName;
                 stampSimple.Password = stamp.Password;
                 stampSimple.PdfFile = ms.ToArray();
+                stampSimple.IPSource = accessor.ActionContext.HttpContext.Connection.RemoteIpAddress.ToString();
 
                 return Ok(await stampWatermarkTextBusiness.ManipulatePdf(stampSimple));
             }

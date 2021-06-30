@@ -66,87 +66,86 @@
                 </div>
 
                 <div class="form-group col-md-8 mt-5">
-                    <label for="name" class="sr-only">Nome completo</label>
-                    <input type="text" id="name"
-                           class="form form-control input-name"
-                           formControlName="name"
-                           placeholder="Entre o nome completo"
-                           [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
-                                             'is-valid': name.valid && (name.dirty || name.touched),
-                                       'form-submitted': formSubmitted}">
-                    <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
-                        <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
-                    </div>
+                    <mat-form-field appearance="outline" style="width: 70vw; min-width: 50px;">
+                        <mat-label>Nome Completo</mat-label>
+                        <input matInput formControlName="name" name="name" value="" />
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'name')"
+                                                errorMsg="O nome é obrigatório.">
+                    </app-field-error-display>
                 </div>
 
                 <div class="form-group col-md-8">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="text"
-                           id="email"
-                           class="form form-control input-email"
-                           formControlName="email"
-                           placeholder="Entre o seu e-mail"
-                           [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
-                                             'is-valid': email.valid && (email.dirty || email.touched),
-                                       'form-submitted': formSubmitted}">
-                    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
-                        <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
-                    </div>
+                    <mat-form-field appearance="outline" style="width: 50vw;">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput formControlName="email" name="email" value="">
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'email')"
+                                             errorMsg="Informe o E-mail.">
+                    </app-field-error-display>
                 </div>
 
                 <div class="form-group col-md-10">
-                    <label for="text1" class="sr-only">Texto 1</label>
-                    <input type="text"
-                           id="text1"
-                           class="form form-control input-document"
-                           formControlName="text1"
-                           placeholder="Entre o texto"
-                           [ngClass]="{'is-invalid': text1.invalid && (text1.dirty || text1.touched),
-                                             'is-valid': text1.valid && (text1.dirty || text1.touched),
-                                       'form-submitted': formSubmitted}">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 1</mat-label>
+                        <textarea matInput
+                                  formControlName="text1"
+                                  name="text1"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
 
-                    <div class="form-control-feedback" *ngIf="text1.errors && (text1.dirty || text1.touched)">
-                        <p *ngIf="text1.errors.required">O Texto 1 é obrigatório</p>
-                    </div>
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'text1')"
+                                             errorMsg="O Texto 1 é obrigatório.">
+                    </app-field-error-display>
                 </div>
 
                 <div class="form-group col-md-10">
-                    <label for="text2" class="sr-only">Texto 2</label>
-                    <input type="text"
-                           id="text2"
-                           class="form form-control input-document"
-                           formControlName="text2"
-                           placeholder="Entre o texto">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 2</mat-label>
+                        <textarea matInput
+                                  formControlName="text2"
+                                  name="text2"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
+
+                    </mat-form-field>
                 </div>
 
                 <div class="form-group col-md-10">
-                    <label for="text3" class="sr-only">Texto 3</label>
-                    <input type="text"
-                           id="text3"
-                           class="form form-control input-document"
-                           formControlName="text3"
-                           placeholder="Entre o texto">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 3</mat-label>
+                        <textarea matInput
+                                  formControlName="text3"
+                                  name="text3"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
+
+                    </mat-form-field>
                 </div>
 
                 <div class="form-group col-md-5">
-                    <label for="password" class="sr-only">Senha</label>
-                    <input type="password"
-                           id="password"
-                           class="form form-control input-document"
-                           formControlName="password"
-                           placeholder="Entre a senha de proteção">
+                    <mat-form-field appearance="outline" style="width: 30vw; min-width: 50px;">
+                        <mat-label>Senha de Proteção</mat-label>
+                        <input matInput formControlName="password" name="password" value="" />
+                    </mat-form-field>
                 </div>
 
                 <div class="form-group col-md-10">
-                    <button type="button" (click)="fileInput.click()">Selecione o arquivo PDF</button>
-                    <input hidden
-                           #fileInput
-                           type="file"
-                           formControlName="file"
-                           id="file"
-                           (change)="uploadDocument(fileInput.files)"
-                           accept=".pdf" /><br />
-                    <label>{{ fileName }}</label>
+                    <mat-form-field appearance="outline" style="width: 70vw; min-width: 50px;">
+                        <mat-label>Arquivo PDF à ser processado.</mat-label>
+                        <ngx-mat-file-input formControlName="file" [accept]="'.pdf'"></ngx-mat-file-input>
+                        <mat-icon matSuffix>folder</mat-icon>
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'file')"
+                                             errorMsg="O arquivo PDF é obrigatório.">
+                    </app-field-error-display>
                 </div>
 
                 <div class="form-group">
@@ -190,7 +189,7 @@
         <div>Baixe os documentos para usar o nosso PDF Protection Service. Abaixo a documentação, arquivo para Postman e exemplo em C#.</div>
         <div class="d-flex justify-content-center">
             <a href="https://acadestorage.blob.core.windows.net/files/Manuais/Manual%20te%CC%81cnico%20de%20implementac%CC%A7a%CC%83o%20do%20PF%20Protection%20Service%20da%20Acades.pdf" target="_blank">
-                <i class="fa fa-file fa-5x"></i> 
+                <i class="fa fa-file     fa-5x"></i> 
             </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://acadestorage.blob.core.windows.net/files/Manuais/services.xcf" target="_blank">
                 <i class="fa fa-download fa-5x" aria-hidden="true"></i>

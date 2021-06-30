@@ -22,6 +22,7 @@ namespace Acades.Dto
 
         public IFormFile File { get; set; }
 
+        public string IPSource { get; set; }
 
     }
 }

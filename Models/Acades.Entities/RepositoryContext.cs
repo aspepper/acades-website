@@ -149,6 +149,7 @@ namespace Acades.Entities
                 p.Property(e => e.OwnerEmail).HasMaxLength(100);
                 p.Property(e => e.OwnerDocument).HasMaxLength(20);
                 p.Property(e => e.PrintCustomerData).HasDefaultValue(false);
+                p.Property(e => e.IPSource).HasMaxLength(15);
                 p.Property(e => e.Error).HasColumnType("nvarchar(MAX)");
 
                 p.Property(e => e.IsDeleted).HasDefaultValue(false);

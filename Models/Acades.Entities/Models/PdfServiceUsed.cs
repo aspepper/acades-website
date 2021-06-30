@@ -22,6 +22,8 @@ namespace Acades.Entities.Models
 
         public bool PrintCustomerData { get; set; }
 
+        public string IPSource { get; set; }
+
         public string Error { get; set; }
 
         public bool IsDeleted { get; set; }
