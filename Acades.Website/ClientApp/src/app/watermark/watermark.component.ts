@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import * as $ from 'jquery';
 import 'bootstrap';
-import { FormBaseComponent } from '../form-base.component'
+import { FormBaseComponent } from '../form-base.component';
 import { WatermarkService } from '../shared/services/watermark.service';
 import { UploadService } from '../shared/services/upload.services';
 import { CustomValidators } from '../shared/components/validators/custom-validators';

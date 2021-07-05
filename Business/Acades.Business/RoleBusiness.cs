@@ -22,6 +22,7 @@ namespace Acades.Business
         {
             var roles = context
                         .Roles
+                        .Where(r => r.IsVisible)
                         .AsQueryable();
 
             return await Task.FromResult(roles.Select(e => Role.ToDto(e)).ToList());

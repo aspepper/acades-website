@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Role } from '../models/role';
 import { Person } from '../models/person';
 
@@ -20,7 +21,16 @@ export class AccountService {
   }
 
   public SaveCareer(person: Person): Observable<number> {
-    return this.http.post<number>(`${this.BaseCareerURL}/save`, person);
+    console.log("SaveCareer ==>");
+    console.log(person);
+    return this.http.post<number>(`${this.BaseCareerURL}/save`, person)
+      .pipe(
+        catchError((err) => {
+          console.log('error caught in service')
+          console.error(err);
+          throw new Error(err);
+        })
+      );
   }
 
 }

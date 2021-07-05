@@ -33,7 +33,8 @@ namespace Acades.Website.Controllers
             };
         }
 
-        [HttpGet("get")]
+        [HttpGet]
+        [Route("get")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -51,11 +52,12 @@ namespace Acades.Website.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(JsonConvert.SerializeObject(ex));
             }
         }
 
-        [HttpPost("save")]
+        [HttpPost]
+        [Route("save")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -79,7 +81,7 @@ namespace Acades.Website.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(JsonConvert.SerializeObject(ex));
             }
         }
 

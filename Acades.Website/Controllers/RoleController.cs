@@ -37,15 +37,22 @@ namespace Acades.Website.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<List<RoleDto>> Get()
+        public async Task<IActionResult> Get()
         {
-            var ret = await client.GetAsync($"get");
+            try
+            {
+                var ret = await client.GetAsync($"get");
 
-            ret.EnsureSuccessStatusCode();
-            string responseBody = await ret.Content.ReadAsStringAsync();
-            var retorno = JsonConvert.DeserializeObject<List<RoleDto>>(responseBody);
+                ret.EnsureSuccessStatusCode();
+                string responseBody = await ret.Content.ReadAsStringAsync();
+                var retorno = JsonConvert.DeserializeObject<List<RoleDto>>(responseBody);
 
-            return retorno;
+                return Ok(retorno);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(JsonConvert.SerializeObject(ex));
+            }
         }
 
         public void Dispose()

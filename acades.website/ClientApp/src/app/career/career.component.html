@@ -34,6 +34,7 @@
     </div>
 
     <div class="col-1"></div>
+
 </div>
 
 <div class="row mt-3 mb-3">
@@ -46,125 +47,95 @@
                 <div class="card p-3 card-form">
 
                     <div class="form-group">
-                        <label for="name" class="sr-only">Nome Completo</label>
-                        <input type="text" id="name"
-                               class="form form-control input-name"
-                               formControlName="name"
-                               placeholder="Entre o nome completo"
-                               [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched),
-                                             'is-valid': name.valid && (name.dirty || name.touched),
-                                       'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
-                            <p *ngIf="name.errors.required">O nome é Obrigatório.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 54vw; min-width: 50px;">
+                            <mat-label>Nome Completo</mat-label>
+                            <input matInput formControlName="name" name="name" value="" />
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'name')"
+                                                 errorMsg="O nome é obrigatório.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="text"
-                               id="email"
-                               class="form form-control input-email"
-                               formControlName="email"
-                               placeholder="Entre o seu e-mail"
-                               [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched),
-                                             'is-valid': email.valid && (email.dirty || email.touched),
-                                       'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
-                            <p *ngIf="email.errors.required">O Email é Obrigatório.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 40vw;">
+                            <mat-label>E-mail</mat-label>
+                            <input matInput formControlName="email" name="email" value="">
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'email')"
+                                                 errorMsg="Informe o E-mail.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="document" class="sr-only">CPF</label>
-                        <input type="text"
-                               id="document"
-                               class="form form-control input-document"
-                               formControlName="document"
-                               placeholder="Entre o CPF"
-                               [specialCharacters]="[ '.', '-' ]"
-                               mask="000.000.000-00"
-                               [ngClass]="{'is-invalid': document.invalid && (document.dirty || document.touched),
-                                             'is-valid': document.valid && (document.dirty || document.touched),
-                                       'form-submitted': formSubmitted}">
-
-                        <div class="form-control-feedback" *ngIf="document.errors && (document.dirty || document.touched)">
-                            <p *ngIf="document.errors.required">O CPF é Obrigatório.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 15vw;">
+                            <mat-label>CPF</mat-label>
+                            <input matInput mask="000.000.000-00" formControlName="document" name="document" value="">
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'document')"
+                                                 errorMsg="Informe o CPF.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="birthDate" class="sr-only">Data de Nascimento</label>
-                        <input type="text"
-                               id="document"
-                               class="form form-control input"
-                               formControlName="birthDate"
-                               placeholder="Digite a data de nascimento"
-                               [specialCharacters]="[ '/' ]"
-                               mask="00/00/0000"
-                               [ngClass]="{'is-invalid': birthDate.invalid && (birthDate.dirty || birthDate.touched),
-                                             'is-valid': birthDate.valid && (birthDate.dirty || birthDate.touched),
-                                       'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="birthDate.errors && (birthDate.dirty || birthDate.touched)">
-                            <p *ngIf="birthDate.errors.required">A Data de nascimento é Obrigatório.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 15vw;">
+                            <mat-label>Data de Nascimento</mat-label>
+                            <input matInput [dropSpecialCharacters]="false" mask="00/00/0000" formControlName="birthDate" name="birthDate" (change)="fillbirthdate($event.target.value)">
+                            <input matInput hidden [matDatepicker]="picker" (dateChange)="fillbirthdate($event.targetElement.value)" formControlName="birthDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'birthDate')"
+                                                 errorMsg="Informe a Data de Nascimento.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="password" class="sr-only">Senha</label>
-                        <input type="password"
-                               id="password"
-                               class="form-control input-password"
-                               formControlName="password"
-                               placeholder="Digite uma senha"
-                               [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched),
-                                             'is-valid': password.valid && (password.dirty || password.touched),
-                                       'form-submitted': formSubmitted}">
-                        <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
-                            <p *ngIf="password.errors.required">A Senha é Obrigatória.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 20vw; min-width: 50px;">
+                            <mat-label>Digite a senha</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="formCareer.get('password').touched && !formCareer.get('password').valid"
+                                                 errorMsg="Informe uma senha.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="passwordCompare" class="sr-only">Senha Novamente</label>
-                        <input type="password"
-                               id="passwordCompare"
-                               class="form form-control input-password"
-                               formControlName="passwordCompare"
-                               placeholder="Digite a senha novamente"
-                               [ngClass]="{'is-invalid': passwordCompare.invalid && (passwordCompare.dirty || passwordCompare.touched),
-                                             'is-valid': passwordCompare.valid && (passwordCompare.dirty || passwordCompare.touched),
-                                       'form-submitted': formSubmitted}">
+                        <mat-form-field appearance="outline" style="width: 20vw; min-width: 50px;">
+                            <mat-label>Confirme a Senha</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordCompare" />
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="formCareer.get('password').touched && formCareer.get('passwordCompare').touched && !formCareer.get('passwordCompare').valid && formCareer.get('passwords').value != formCareer.get('passwordCompare').value"
+                                                 errorMsg="A confirmação da senha deve ser igual a senha digitada.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <label for="roleIds" class="sr-only">Cargo(s)</label>
-                        <ng-select bindLabel="description"
-                                   bindValue="id"
-                                   formControlName="roleIds"
-                                   placeholder="Informe o(s) Cargo(s) que atua"
-                                   class="input-roleIds form"
-                                   [closeOnSelect]="true"
-                                   [searchable]="true"
-                                   [multiple]="true"
-                                   [items]="roles"
-                                   [ngClass]="{'is-invalid': roleIds.invalid && (roleIds.dirty || roleIds.touched),
-                                                 'is-valid': roleIds.valid && (roleIds.dirty || roleIds.touched),
-                                       'form-submitted': formSubmitted}">
-                        </ng-select>
-                        <div class="form-control-feedback" *ngIf="roleIds.errors && (roleIds.dirty || roleIds.touched)">
-                            <p *ngIf="roleIds.errors.required">O Cargo é obrigatório.</p>
-                        </div>
+                        <mat-form-field appearance="outline" style="width: 50vw;">
+                            <mat-label>Cargo(s)</mat-label>
+                            <mat-select formControlName="roleIds" name="roleIds" multiple>
+                                <mat-option *ngFor="let role of roles" [value]="role">{{ role.description }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'roleIds')"
+                                                 errorMsg="Informe o cargo desejado.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">
-                        <button type="button" (click)="fileInput.click()">Subir currículo (.pdf, .doc, .docx)</button>
-                        <input hidden
-                               #fileInput
-                               type="file"
-                               formControlName="resumeFileName"
-                               id="file"
-                               (change)="setFilename(fileInput.files)" />
-                        <label>{{ resumeFileName.value }}</label>
+                        <mat-form-field appearance="outline" style="width: 50vw; min-width: 50px;">
+                            <mat-label>Subir currículo (.pdf, .doc, .docx)</mat-label>
+                            <ngx-mat-file-input formControlName="resumeFileName" [accept]="['.pdf','.doc','.docx']"></ngx-mat-file-input>
+                            <mat-icon matSuffix>folder</mat-icon>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'resumeFileName')"
+                                                 errorMsg="O currículo é obrigatório.">
+                        </app-field-error-display>
                     </div>
 
                     <div class="form-group">

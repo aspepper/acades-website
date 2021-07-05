@@ -22,7 +22,8 @@ namespace Acades.API.Controllers
         }
 
         // GET: api/Carrer/5
-        [HttpGet("get")]
+        [HttpGet]
+        [Route("get")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

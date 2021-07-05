@@ -17,33 +17,32 @@ namespace Acades.Website.Controllers
     public class CareerController : ControllerBase, IDisposable
     {
 
-        private readonly ILogger<CareerController> _logger;
-        private readonly IConfiguration _conf;
+        private readonly ILogger<CareerController> logger;
+        private readonly IConfiguration configuration;
         private HttpClient client;
 
-        public CareerController(ILogger<CareerController> logger, IConfiguration conf)
+        public CareerController(ILogger<CareerController> logger, IConfiguration configuration)
         {
-            _logger = logger;
-            _conf = conf;
+            this.logger = logger;
+            this.configuration = configuration;
             client = new HttpClient
-            {
-                BaseAddress = new Uri(string.Concat(conf.GetSection("ApiServiceURL").Value, "api/Carrer/"))
-            };
+            { BaseAddress = new Uri(string.Concat(configuration.GetSection("ApiServiceURL").Value, "api/carrer/")) };
         }
 
-        [HttpGet("get")]
+        [HttpGet]
+        [Route("get")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult> Get()
         {
-
             var ret = await Task.FromResult<int>(1);
 
             return Ok(ret);
         }
 
-        [HttpPost("save")]
+        [HttpPost]
+        [Route("save")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -52,7 +51,6 @@ namespace Acades.Website.Controllers
             try
             {
                 var personContext = JsonConvert.SerializeObject(person);
-
                 var httpContext = new StringContent(personContext, Encoding.UTF8, "application/json");
 
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -65,8 +63,10 @@ namespace Acades.Website.Controllers
 
                 return Ok(retorno);
             }
-            catch(Exception ex){
-                return BadRequest(ex);
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.Message);
+                return BadRequest(JsonConvert.SerializeObject(ex));
             }
         }
 

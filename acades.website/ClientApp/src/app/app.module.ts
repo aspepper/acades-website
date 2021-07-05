@@ -19,6 +19,10 @@ import {
   MatOptionModule,
   MatSelectModule
 } from '@angular/material';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from "ngx-mask";
@@ -44,6 +48,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServicesComponent } from './services/services.component';
 import { UserCasesComponent } from './user-cases/user-cases.component';
 import { WatermarkComponent } from './watermark/watermark.component';
+import { CustomerEnrollComponent } from './customer-enroll/customer-enroll.component';
 
 
 @NgModule({
@@ -59,7 +64,8 @@ import { WatermarkComponent } from './watermark/watermark.component';
     ContactUsComponent,
     ServicesComponent,
     UserCasesComponent,
-    WatermarkComponent
+    WatermarkComponent,
+    CustomerEnrollComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -83,6 +89,9 @@ import { WatermarkComponent } from './watermark/watermark.component';
     MatMenuModule,
     MatOptionModule,
     MatSelectModule,
+
+    MatNativeDateModule,
+    MatDatepickerModule,
 
     NgxMaskModule.forRoot(),
     RouterModule.forRoot([

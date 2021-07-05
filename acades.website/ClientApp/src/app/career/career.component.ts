@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import * as $ from 'jquery';
 import 'bootstrap';
+import { FormBaseComponent } from '../form-base.component';
 import { Person } from '../shared/models/person';
 import { User } from '../shared/models/user';
 import { Role } from '../shared/models/role';
@@ -19,7 +20,7 @@ import { UploadService } from '../shared/services/upload.services';
   templateUrl: './career.component.html',
   styleUrls: ['./career.component.css']
 })
-export class CareerComponent implements OnInit, AfterViewInit {
+export class CareerComponent extends FormBaseComponent implements OnInit, AfterViewInit {
 
   public formCareer: FormGroup;
   public name: FormControl;
@@ -30,6 +31,8 @@ export class CareerComponent implements OnInit, AfterViewInit {
   public passwordCompare: FormControl;
   public roleIds: FormControl;
   public resumeFileName: FormControl;
+  public birthDatePicker: FormControl;
+  public hide: boolean = true;
 
   public filename = '';
 
@@ -45,11 +48,11 @@ export class CareerComponent implements OnInit, AfterViewInit {
     private service: AccountService,
     private uploadService: UploadService
   ) {
-
-    this.createForm();
+    super();
   }
 
   ngOnInit() {
+    this.createForm();
     this.getRoles();
   }
 
@@ -73,8 +76,9 @@ export class CareerComponent implements OnInit, AfterViewInit {
     ]);
     this.birthDate = new FormControl('', [
       Validators.required,
-      Validators.minLength(8)
+      Validators.minLength(10)
     ]);
+    this.birthDatePicker = new FormControl();
     this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(3)
@@ -89,6 +93,15 @@ export class CareerComponent implements OnInit, AfterViewInit {
     this.resumeFileName = new FormControl('', [
       Validators.required
     ])
+
+  }
+
+  public fillbirthdate(value): void {
+    this.birthDate.setValue(value);
+    const birtYear = parseInt(this.birthDate.value.substr(6, 4));
+    const birtMonth = parseInt(this.birthDate.value.substr(3, 2)) - 1;
+    const birtDate = parseInt(this.birthDate.value.substr(0, 2));
+    this.birthDatePicker.setValue(new Date(birtYear, birtMonth, birtDate));
   }
 
   public createForm(): void {
@@ -100,6 +113,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
       email: this.email,
       document: this.document,
       birthDate: this.birthDate,
+      birthDatePicker: this.birthDatePicker,
       password: this.password,
       passwordCompare: this.passwordCompare,
       roleIds: this.roleIds,
@@ -109,12 +123,14 @@ export class CareerComponent implements OnInit, AfterViewInit {
 
   public getRoles(): void {
 
-    this.service
-      .GetListRoles()
+    this.service.GetListRoles()
       .subscribe(
         data => {
           this.roles = data;
           console.log(this.roles);
+        },
+        error => {
+          console.log(error);
         })
   }
 
@@ -122,19 +138,13 @@ export class CareerComponent implements OnInit, AfterViewInit {
     this.createForm();
   }
 
-  public setFilename(files): void {
-    if (files[0]) {
-      this.filename = files[0].name;
-    }
-    this.save(files);
-  } 
-
   public save(files): void {
     const formData = new FormData();
 
-    if (files[0]) {
-      formData.append(files[0].name, files[0]);
-    }
+    formData.append(files[0].name, files[0]);
+    this.filename = files[0].name;
+
+    console.log(files[0]);
 
     this.uploadService
       .upload(formData)
@@ -160,7 +170,7 @@ export class CareerComponent implements OnInit, AfterViewInit {
 
             console.log(this.resume);
 
-          });
+          }, (error) => { console.log(error); });
 
 
       })
@@ -168,68 +178,84 @@ export class CareerComponent implements OnInit, AfterViewInit {
   }
 
   public enrollment(event): void {
-    event.preventDefault();
-    this.formSubmitted = true;
 
-    console.log(this.formCareer.value);
+    try {
+      const files = this.formCareer.get('resumeFileName').value.files;
+      if (files.length > 0) { this.save(files); }
 
-    const birtYear = parseInt(this.birthDate.value.substr(4, 4));
-    const birtMonth = parseInt(this.birthDate.value.substr(2, 2)) - 1;
-    const birtDate = parseInt(this.birthDate.value.substr(0, 2));
+      event.preventDefault();
+      this.formSubmitted = true;
 
-    let person = new Person();
-    person.name = this.name.value;
-    person.document = this.document.value;
-    person.birthDate = new Date(birtYear, birtMonth, birtDate);
+      console.log(this.formCareer.value);
 
-    console.log(this.roleIds.value);
-    this.roleIds
-      .value
-      .forEach(e => {
-        if (person.roles == null) { person.roles = new Array<PersonRole>() }
-        this.roles.forEach(r => {
-          if (r.id == parseInt(e)) {
-            let pr = new PersonRole();
-            pr.roleId = r.id;
-            person.roles.push(pr);
+      const birtYear = parseInt(this.birthDate.value.substr(6, 4));
+      const birtMonth = parseInt(this.birthDate.value.substr(3, 2)) - 1;
+      const birtDate = parseInt(this.birthDate.value.substr(0, 2));
+
+      let person = new Person();
+      person.name = this.name.value;
+      person.document = this.document.value;
+      person.birthDate = new Date(birtYear, birtMonth, birtDate);
+
+
+      console.log("this.roleIds ::");
+      console.log(this.roleIds);
+
+      this.roleIds
+        .value
+        .forEach(e => {
+          if (person.roles == null) { person.roles = new Array<PersonRole>() }
+          this.roles.forEach(r => {
+            if (r.id == parseInt(e)) {
+              let pr = new PersonRole();
+              pr.roleId = r.id;
+              person.roles.push(pr);
+            }
+          })
+        });
+
+      let user = new User();
+      user.userName = this.document.value;
+      user.email = this.email.value;
+      user.password = this.password.value;
+
+      console.log("user ::");
+      console.log(user);
+
+      if (person.users == null) { person.users = new Array<User>(); }
+      person.users.push(user);
+
+      console.log("person :: ");
+      console.log(person);
+
+      this.service
+        .SaveCareer(person)
+        .subscribe(personId => {
+
+          if (this.resume != null) {
+            this.resume.personId = personId;
+
+            this.uploadService
+              .uploadResume(this.resume)
+              .subscribe(id => {
+
+                console.log(this.resume);
+
+              }, (error) => { console.log(error); });
           }
-        })
-      });
 
-    let user = new User();
-    user.email = this.email.value;
-    user.password = this.password.value;
+          alert("Cadastro realizado com sucesso.");
+          this.clearForm();
 
-    console.log(user);
+        }, (err) => {
+          console.log(err);
+          alert("Ocorreu um erro no cadastro. Tente mais tarde.");
+        });
 
-    if (person.users == null) { person.users = new Array<User>(); }
-    person.users.push(user);
-
-    console.log("person :: ");
-    console.log(person);
-
-    this.service
-      .SaveCareer(person)
-      .subscribe(personId => {
-
-        if (this.resume != null) {
-          this.resume.personId = personId;
-
-          this.uploadService
-            .uploadResume(this.resume)
-            .subscribe(id => {
-
-              console.log(this.resume);
-
-            });
-        }
-
-        alert("Cadastro realizado com sucesso.");
-        this.clearForm();
-      }, (err) => {
-        console.log(err);
-        alert("Ocorreu um erro no cadastro. Tente mais tarde.");
-      });
+    }
+    catch (e) {
+      console.log(e);
+    }
 
   }
 
