@@ -49,6 +49,8 @@ import { ServicesComponent } from './services/services.component';
 import { UserCasesComponent } from './user-cases/user-cases.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 import { CustomerEnrollComponent } from './customer-enroll/customer-enroll.component';
+import { ThankEnrollComponent } from './thank-enroll/thank-enroll.component';
+import { BackPaymentComponent } from './back-payment/back-payment.component';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { CustomerEnrollComponent } from './customer-enroll/customer-enroll.compo
     ServicesComponent,
     UserCasesComponent,
     WatermarkComponent,
-    CustomerEnrollComponent
+    CustomerEnrollComponent,
+    ThankEnrollComponent,
+    BackPaymentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

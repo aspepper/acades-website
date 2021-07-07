@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AguardeContatoComponent } from './aguarde-contato.component';
+import { ThankEnrollComponent } from './thank-enroll.component';
 
-describe('AguardeContatoComponent', () => {
-  let component: AguardeContatoComponent;
-  let fixture: ComponentFixture<AguardeContatoComponent>;
+describe('ThankEnrollComponent', () => {
+  let component: ThankEnrollComponent;
+  let fixture: ComponentFixture<ThankEnrollComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AguardeContatoComponent ]
+      declarations: [ ThankEnrollComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AguardeContatoComponent);
+    fixture = TestBed.createComponent(ThankEnrollComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
