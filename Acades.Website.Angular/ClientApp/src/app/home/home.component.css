@@ -1,0 +1,47 @@
+.home_top_background img {
+  width: 100%;
+}
+
+.home_top {
+  height: 38vw;
+}
+
+.content_icons {
+    height: 3vw;
+    align-content: center;
+}
+
+.content_icons img {
+  height: 3vw;
+}
+
+@media screen and (max-width: 960px) {
+  .target_div_subject {
+    margin-right: 1vw;
+  }
+  .values_div_subject {
+    margin-left: 1vw;
+  }
+  .title_main {
+      font-size: 20px;
+  }
+  .middle_text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .target_div_subject {
+    margin-right: 2vw;
+  }
+  .values_div_subject {
+    margin-left: 1vw;
+  }
+  .title_main {
+    font-size: 3vw;
+  }
+
+  .middle_text {
+    font-size: 2vw;
+  }
+}

@@ -1,0 +1,154 @@
+﻿<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <h3>
+            Venha
+            <small class="text-muted"> fazer parte da nossa história, e fazer a sua história.</small>
+        </h3>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10" ng-non-bindable>
+
+        <div class="shadow p-1 mb-3 bg-white">
+
+            <div id="carouselCarrer" class="carousel " data-ride="carousel" data-interval="1000">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/carrer_banner.jpg" class="img-responsive img-fluid shadow" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="txt-color-tm-white txt-shadow pb-5" style="font-size: 2vw;"><strong>Se você tem espírito empreendedor, tem tudo para crescer conosco...<br /><br /><br /><br /><br /><br /><br /></strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-1"></div>
+
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10">
+        <div class="d-flex justify-content-center align-items-center ">
+            <form class="form" [formGroup]="formCareer" (ngSubmit)="enrollment($event)">
+
+                <div class="card p-3 card-form">
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 54vw; min-width: 50px;">
+                            <mat-label>Nome Completo</mat-label>
+                            <input matInput formControlName="name" name="name" value="" />
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'name')"
+                                                 errorMsg="O nome é obrigatório.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 40vw;">
+                            <mat-label>E-mail</mat-label>
+                            <input matInput formControlName="email" name="email" value="">
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'email')"
+                                                 errorMsg="Informe o E-mail.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 15vw;">
+                            <mat-label>CPF</mat-label>
+                            <input matInput mask="000.000.000-00" formControlName="document" name="document" value="">
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'document')"
+                                                 errorMsg="Informe o CPF.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 15vw;">
+                            <mat-label>Data de Nascimento</mat-label>
+                            <input matInput [dropSpecialCharacters]="false" mask="00/00/0000" formControlName="birthDate" name="birthDate" (change)="fillbirthdate($event.target.value)">
+                            <input matInput hidden [matDatepicker]="picker" (dateChange)="fillbirthdate($event.targetElement.value)" formControlName="birthDatePicker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'birthDate')"
+                                                 errorMsg="Informe a Data de Nascimento.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 20vw; min-width: 50px;">
+                            <mat-label>Digite a senha</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="formCareer.get('password').touched && !formCareer.get('password').valid"
+                                                 errorMsg="Informe uma senha.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 20vw; min-width: 50px;">
+                            <mat-label>Confirme a Senha</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordCompare" />
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="formCareer.get('password').touched && formCareer.get('passwordCompare').touched && !formCareer.get('passwordCompare').valid && formCareer.get('passwords').value != formCareer.get('passwordCompare').value"
+                                                 errorMsg="A confirmação da senha deve ser igual a senha digitada.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 50vw;">
+                            <mat-label>Cargo(s)</mat-label>
+                            <mat-select formControlName="roleIds" name="roleIds" multiple>
+                                <mat-option *ngFor="let role of roles" [value]="role">{{ role.description }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'roleIds')"
+                                                 errorMsg="Informe o cargo desejado.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 50vw; min-width: 50px;">
+                            <mat-label>Subir currículo (.pdf, .doc, .docx)</mat-label>
+                            <ngx-mat-file-input formControlName="resumeFileName" [accept]="['.pdf','.doc','.docx']"></ngx-mat-file-input>
+                            <mat-icon matSuffix>folder</mat-icon>
+                        </mat-form-field>
+                        <app-field-error-display [displayError]="isFieldValid(formCareer, 'resumeFileName')"
+                                                 errorMsg="O currículo é obrigatório.">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-success float-right mr-2" (click)="clearForm()">Limpar</button>
+                        <button class="btn btn-success float-right mr-4" [disabled]="!formCareer.valid" type="submit">Enviar</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="col-1"></div>
+</div>
+

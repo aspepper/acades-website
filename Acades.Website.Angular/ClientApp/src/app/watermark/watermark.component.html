@@ -1,0 +1,203 @@
+
+<div *ngIf="processing" class="spinner-grow text-primary spinner"
+     id="spinner" role="status">
+    <span class="sr-only">Processando...</span>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <h3>
+            Proteja
+            <small class="text-muted">
+                teus e-books, documentos, tutoriais, entre outros objetos PDF de distribuíção indevida.
+                carimbando marcas d'água com dados para identificar a quem realmente você entregou eses objetos.
+            </small>
+            <small class="text-muted">
+                Inclua uma senha antes de entegar o documento aos teus usuários.
+            </small>
+        </h3>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10" ng-non-bindable>
+
+        <div class="shadow p-1 mb-3 bg-white">
+
+            <div id="carouselCarrer" class="carousel " data-ride="carousel" data-interval="1000">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/ProtecaoDadosPDF.png" class="img-responsive img-fluid shadow" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="txt-color-tm-white txt-shadow pb-5" style="font-size: 2vw;"><strong>Proteja os teus documntos PF de distribuíção indevida.<br /><br /><br /><br /><br /><br /><br /></strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+
+    <div class="col-10">
+        <form class="form" [formGroup]="formWatermark" (ngSubmit)="proceed($event)">
+
+            <div class="d-flex card card-form ">
+
+                <div class="form-group col-md-8 mt-5">
+                    <p>Como preencher este formulário?</p>
+                    <p>Preencha os dados obrigatórios preenchendo seu: nome completo e e-mail.</p>
+                    <p>Digite o Texto 1. Este será o primeiro texto que aparecerá como marca d'água, e é obirgatório.</p>
+                    <p>Opcionalmente, digite os Textos 2 e 3. A senha também é opcional e será usada para proteger o documento PDF com esta senha</p>
+                    <p>selecione o arquivo PDF deejado, que está armazenado na sua máquina, e clique em Enviar para o arquivo ser processado.</p>
+                    <p>Aguarde o processamento. Assim que o processo finalizar, o novo documento processado será baixado automaticamente para você.</p>
+                </div>
+
+                <div class="form-group col-md-8 mt-5">
+                    <mat-form-field appearance="outline" style="width: 70vw; min-width: 50px;">
+                        <mat-label>Nome Completo</mat-label>
+                        <input matInput formControlName="name" name="name" value="" />
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'name')"
+                                                errorMsg="O nome é obrigatório.">
+                    </app-field-error-display>
+                </div>
+
+                <div class="form-group col-md-8">
+                    <mat-form-field appearance="outline" style="width: 50vw;">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput formControlName="email" name="email" value="">
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'email')"
+                                             errorMsg="Informe o E-mail.">
+                    </app-field-error-display>
+                </div>
+
+                <div class="form-group col-md-10">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 1</mat-label>
+                        <textarea matInput
+                                  formControlName="text1"
+                                  name="text1"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
+
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'text1')"
+                                             errorMsg="O Texto 1 é obrigatório.">
+                    </app-field-error-display>
+                </div>
+
+                <div class="form-group col-md-10">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 2</mat-label>
+                        <textarea matInput
+                                  formControlName="text2"
+                                  name="text2"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group col-md-10">
+                    <mat-form-field appearance="outline" style="width: 75vw;">
+                        <mat-label>Texto 3</mat-label>
+                        <textarea matInput
+                                  formControlName="text3"
+                                  name="text3"
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMinRows="1"
+                                  cdkAutosizeMaxRows="3"></textarea>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group col-md-5">
+                    <mat-form-field appearance="outline" style="width: 30vw; min-width: 50px;">
+                        <mat-label>Senha de Proteção</mat-label>
+                        <input matInput formControlName="password" name="password" value="" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group col-md-10">
+                    <mat-form-field appearance="outline" style="width: 70vw; min-width: 50px;">
+                        <mat-label>Arquivo PDF à ser processado.</mat-label>
+                        <ngx-mat-file-input formControlName="file" [accept]="'.pdf'"></ngx-mat-file-input>
+                        <mat-icon matSuffix>folder</mat-icon>
+                    </mat-form-field>
+                    <app-field-error-display [displayError]="isFieldValid(formWatermark, 'file')"
+                                             errorMsg="O arquivo PDF é obrigatório.">
+                    </app-field-error-display>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-success float-right mr-4" [disabled]="!formWatermark.valid || processing" type="submit">Enviar</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <small class="text-muted">
+            Este é uma área de testes para que você tenho uma ideia de como funciona nosso serviço de proteção dos seus PDF`s.
+        </small>
+        <small class="text-muted">
+            Os campos obrigatórios para o teste são apenas o nome completo, o e-mail, o texto 1 e o arquivo PDF.
+        </small>
+        <small class="text-muted">
+            Os textos que você informar, sempre serão mostrados nas mesmas posições no documento. As cores sempre serão Azul para o Texto 1,
+            Verde para o Texto 2 e Vermelho para o Texto 3, e a fonte sempre será Helvetica-Bold, com tamanho 20 pontos, opacidade de 50%,
+            e direção diagonal da esquerda para a direita.
+        </small>
+        <small class="text-muted">
+            O serviço será disponibilizado de forma que o cliente poderá informar todos esses dados, de acordo com suas necessidades.
+        </small>
+    </div>
+    <div class="col-1"></div>
+
+</div>
+
+
+<div class="row mt-3 mb-3">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <div>Baixe os documentos para usar o nosso PDF Protection Service. Abaixo a documentação, arquivo para Postman e exemplo em C#.</div>
+        <div class="d-flex justify-content-center">
+            <a href="https://acadestorage.blob.core.windows.net/files/Manuais/Manual%20te%CC%81cnico%20de%20implementac%CC%A7a%CC%83o%20do%20PF%20Protection%20Service%20da%20Acades.pdf" target="_blank">
+                <i class="fa fa-file     fa-5x"></i> 
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://acadestorage.blob.core.windows.net/files/Manuais/services.xcf" target="_blank">
+                <i class="fa fa-download fa-5x" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div>O serviço será disponibilizado de forma que o cliente poderá informar todos esses dados, de acordo com suas necessidades.</div>
+    </div>
+    <div class="col-1"></div>
+
+</div>
+
