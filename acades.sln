@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "marca_dagua_pdf", "Laborato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StampWatermakService", "Laboratory\WatermarkSample\StampWatermakService\StampWatermakService.csproj", "{388ADC11-99D8-4E7E-A346-4C0219C8AC5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acades.Website.Blazor", "Acades.Website.Blazor\Acades.Website.Blazor.csproj", "{9540F466-54F7-41E5-A06A-AC40619A3ADD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acades.Website.Blazor", "Acades.Website.Blazor\Acades.Website.Blazor.csproj", "{7354DD32-5B02-492C-BC23-7B9A92763B50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,10 +91,10 @@ Global
 		{388ADC11-99D8-4E7E-A346-4C0219C8AC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{388ADC11-99D8-4E7E-A346-4C0219C8AC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{388ADC11-99D8-4E7E-A346-4C0219C8AC5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9540F466-54F7-41E5-A06A-AC40619A3ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9540F466-54F7-41E5-A06A-AC40619A3ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9540F466-54F7-41E5-A06A-AC40619A3ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9540F466-54F7-41E5-A06A-AC40619A3ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7354DD32-5B02-492C-BC23-7B9A92763B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7354DD32-5B02-492C-BC23-7B9A92763B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7354DD32-5B02-492C-BC23-7B9A92763B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7354DD32-5B02-492C-BC23-7B9A92763B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

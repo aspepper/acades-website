@@ -11,18 +11,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.7" PrivateAssets="all" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Pages\AboutUs\" />
-    <Folder Include="Pages\BackPayment\" />
-    <Folder Include="Pages\Carrer\" />
-    <Folder Include="Pages\ContactUs\" />
-    <Folder Include="Pages\CustomerEnroll\" />
-    <Folder Include="Pages\Footer\" />
-    <Folder Include="Pages\NavMenu\" />
-    <Folder Include="Pages\Watermark\" />
-    <Folder Include="Pages\UserCases\" />
-    <Folder Include="Pages\ThankEnroll\" />
-  </ItemGroup>
-
 </Project>
